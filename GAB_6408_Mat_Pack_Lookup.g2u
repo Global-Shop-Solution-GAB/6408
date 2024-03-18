@@ -1,0 +1,2570 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.frmLookup..create
+Gui.frmLookup..caption("Material Assembly History with Certs")
+Gui.frmLookup..size(16185,9105)
+Gui.frmLookup..minx(16185)
+Gui.frmLookup..miny(9105)
+Gui.frmLookup..position(0,0)
+Gui.frmLookup..event(UnLoad,frmLookup_UnLoad)
+Gui.frmLookup..forecolor(0)
+Gui.frmLookup..BackColor(-2147483633)
+Gui.frmLookup..mousepointer(0)
+Gui.frmLookup.frameOptions.Create(Frame)
+Gui.frmLookup.frameOptions.Size(2145,735)
+Gui.frmLookup.frameOptions.Position(60,0)
+Gui.frmLookup.optItem.Create(Option)
+Gui.frmLookup.optItem.Size(1275,255)
+Gui.frmLookup.optItem.Position(15,135)
+Gui.frmLookup.optItem.Parent("frameOptions")
+Gui.frmLookup.optItem.Caption("Item History")
+Gui.frmLookup.optItem.Event(Click,Options)
+Gui.frmLookup.optItem.TabStop(True)
+Gui.frmLookup.optItem.TabIndex(1)
+Gui.frmLookup.optCerts.Create(Option)
+Gui.frmLookup.optCerts.Size(2115,255)
+Gui.frmLookup.optCerts.Position(15,420)
+Gui.frmLookup.optCerts.Parent("frameOptions")
+Gui.frmLookup.optCerts.Caption("Material Assembly/Certs")
+Gui.frmLookup.optCerts.Event(Click,Options)
+Gui.frmLookup.optCerts.TabStop(True)
+Gui.frmLookup.optCerts.TabIndex(2)
+Gui.frmLookup.GsGCSearch.Create(GsGridControl)
+Gui.frmLookup.GsGCSearch.Size(13065,3255)
+Gui.frmLookup.GsGCSearch.Position(2955,825)
+Gui.frmLookup.GsGCSearch.Anchor(13)
+Gui.frmLookup.GsGCSearch.TabStop(True)
+Gui.frmLookup.GsGCSearch.TabIndex(16)
+Gui.frmLookup.GsGCSearch.Event(RowCellClick,GsGCSearch_RowCellClick)
+Gui.frmLookup.frameSearch.Create(Frame)
+Gui.frmLookup.frameSearch.Size(2835,5295)
+Gui.frmLookup.frameSearch.Position(60,720)
+Gui.frmLookup.cboPart.Create(ComboBox)
+Gui.frmLookup.cboPart.Size(2160,330)
+Gui.frmLookup.cboPart.Position(45,405)
+Gui.frmLookup.cboPart.Parent("frameSearch")
+Gui.frmLookup.cboPart.Event(LostFocus,LoadCboPLBHS)
+Gui.frmLookup.cboPart.TabStop(True)
+Gui.frmLookup.cboPart.TabIndex(4)
+Gui.frmLookup.cboPart.Event(Change,Changed)
+Gui.frmLookup.cboCustPO.Create(ComboBox)
+Gui.frmLookup.cboCustPO.Size(2745,330)
+Gui.frmLookup.cboCustPO.Position(45,3585)
+Gui.frmLookup.cboCustPO.Parent("frameSearch")
+Gui.frmLookup.cboCustPO.Event(LostFocus,cboCustPO_LostFocus)
+Gui.frmLookup.cboCustPO.TabStop(True)
+Gui.frmLookup.cboCustPO.TabIndex(11)
+Gui.frmLookup.cboLot.Create(ComboBox)
+Gui.frmLookup.cboLot.Size(2745,330)
+Gui.frmLookup.cboLot.Position(45,1035)
+Gui.frmLookup.cboLot.Parent("frameSearch")
+Gui.frmLookup.cboLot.Event(LostFocus,LoadCboPLBHS)
+Gui.frmLookup.cboLot.TabStop(True)
+Gui.frmLookup.cboLot.TabIndex(6)
+Gui.frmLookup.cboLot.Event(Change,Changed)
+Gui.frmLookup.lblLot.Create(Label,"Lot",True,405,255,0,45,825,True,0,"Arial",8,-2147483633,0)
+Gui.frmLookup.lblLot.Parent("frameSearch")
+Gui.frmLookup.lblBin.Create(Label,"Bin",True,405,255,0,45,1455,True,0,"Arial",8,-2147483633,0)
+Gui.frmLookup.lblBin.Parent("frameSearch")
+Gui.frmLookup.cboBin.Create(ComboBox)
+Gui.frmLookup.cboBin.Size(2745,330)
+Gui.frmLookup.cboBin.Position(45,1665)
+Gui.frmLookup.cboBin.Parent("frameSearch")
+Gui.frmLookup.cboBin.Event(LostFocus,LoadCboPLBHS)
+Gui.frmLookup.cboBin.TabStop(True)
+Gui.frmLookup.cboBin.TabIndex(7)
+Gui.frmLookup.cboBin.Event(Change,Changed)
+Gui.frmLookup.lblHeat.Create(Label,"Heat",True,495,255,0,45,2085,True,0,"Arial",8,-2147483633,0)
+Gui.frmLookup.lblHeat.Parent("frameSearch")
+Gui.frmLookup.cboHeat.Create(ComboBox)
+Gui.frmLookup.cboHeat.Size(2745,330)
+Gui.frmLookup.cboHeat.Position(45,2295)
+Gui.frmLookup.cboHeat.Parent("frameSearch")
+Gui.frmLookup.cboHeat.Event(LostFocus,LoadCboPLBHS)
+Gui.frmLookup.cboHeat.TabStop(True)
+Gui.frmLookup.cboHeat.TabIndex(8)
+Gui.frmLookup.cboHeat.Event(Change,Changed)
+Gui.frmLookup.cboSerial.Create(ComboBox)
+Gui.frmLookup.cboSerial.Size(2745,330)
+Gui.frmLookup.cboSerial.Position(45,2925)
+Gui.frmLookup.cboSerial.Parent("frameSearch")
+Gui.frmLookup.cboSerial.Event(LostFocus,LoadCboPLBHS)
+Gui.frmLookup.cboSerial.TabStop(True)
+Gui.frmLookup.cboSerial.TabIndex(9)
+Gui.frmLookup.cboSerial.Event(Change,Changed)
+Gui.frmLookup.lblSerial.Create(Label,"Serial Number",True,1155,255,0,45,2715,True,0,"Arial",8,-2147483633,0)
+Gui.frmLookup.lblSerial.Parent("frameSearch")
+Gui.frmLookup.cboInvoice.Create(ComboBox)
+Gui.frmLookup.cboInvoice.Size(2745,330)
+Gui.frmLookup.cboInvoice.Position(45,4215)
+Gui.frmLookup.cboInvoice.Parent("frameSearch")
+Gui.frmLookup.cboInvoice.Event(LostFocus,cboInvoice_LostFocus)
+Gui.frmLookup.cboInvoice.TabStop(True)
+Gui.frmLookup.cboInvoice.TabIndex(13)
+Gui.frmLookup.cboOrderNo.Create(ComboBox)
+Gui.frmLookup.cboOrderNo.Size(2745,330)
+Gui.frmLookup.cboOrderNo.Position(45,4845)
+Gui.frmLookup.cboOrderNo.Parent("frameSearch")
+Gui.frmLookup.cboOrderNo.Event(LostFocus,cboOrderNo_LostFocus)
+Gui.frmLookup.cboOrderNo.TabStop(True)
+Gui.frmLookup.cboOrderNo.TabIndex(15)
+Gui.frmLookup.cboLoc.Create(ComboBox)
+Gui.frmLookup.cboLoc.Size(555,330)
+Gui.frmLookup.cboLoc.Position(2235,405)
+Gui.frmLookup.cboLoc.Parent("frameSearch")
+Gui.frmLookup.cboLoc.TabStop(True)
+Gui.frmLookup.cboLoc.TabIndex(5)
+Gui.frmLookup.cboLoc.Event(Change,Changed)
+Gui.frmLookup.lblLoc.Create(Label,"Loc",True,390,255,0,2235,195,True,0,"Arial",8,-2147483633,0)
+Gui.frmLookup.lblLoc.Parent("frameSearch")
+Gui.frmLookup.optPart.Create(Option)
+Gui.frmLookup.optPart.Size(1365,255)
+Gui.frmLookup.optPart.Position(45,135)
+Gui.frmLookup.optPart.Parent("frameSearch")
+Gui.frmLookup.optPart.Caption("Part Number")
+Gui.frmLookup.optPart.Event(Click,Searches)
+Gui.frmLookup.optPart.TabStop(True)
+Gui.frmLookup.optPart.TabIndex(3)
+Gui.frmLookup.optCustPO.Create(Option)
+Gui.frmLookup.optCustPO.Size(1365,255)
+Gui.frmLookup.optCustPO.Position(45,3315)
+Gui.frmLookup.optCustPO.Parent("frameSearch")
+Gui.frmLookup.optCustPO.Caption("Customer PO")
+Gui.frmLookup.optCustPO.Event(Click,Searches)
+Gui.frmLookup.optCustPO.TabStop(True)
+Gui.frmLookup.optCustPO.TabIndex(10)
+Gui.frmLookup.optInvoice.Create(Option)
+Gui.frmLookup.optInvoice.Size(930,255)
+Gui.frmLookup.optInvoice.Position(45,3945)
+Gui.frmLookup.optInvoice.Parent("frameSearch")
+Gui.frmLookup.optInvoice.Caption("Invoice")
+Gui.frmLookup.optInvoice.Event(Click,Searches)
+Gui.frmLookup.optInvoice.TabStop(True)
+Gui.frmLookup.optInvoice.TabIndex(12)
+Gui.frmLookup.optOrderNo.Create(Option)
+Gui.frmLookup.optOrderNo.Size(2010,255)
+Gui.frmLookup.optOrderNo.Position(45,4575)
+Gui.frmLookup.optOrderNo.Parent("frameSearch")
+Gui.frmLookup.optOrderNo.Caption("Sales Order Number")
+Gui.frmLookup.optOrderNo.Event(Click,Searches)
+Gui.frmLookup.optOrderNo.TabStop(True)
+Gui.frmLookup.optOrderNo.TabIndex(14)
+Gui.frmLookup.picGSSLogo.Create(PictureBox)
+Gui.frmLookup.picGSSLogo.Size(2790,2730)
+Gui.frmLookup.picGSSLogo.Position(60,6060)
+Gui.frmLookup.picGSSLogo.Anchor(6)
+Gui.frmLookup.GsGCLookup.Create(GsGridControl)
+Gui.frmLookup.GsGCLookup.Size(13065,4650)
+Gui.frmLookup.GsGCLookup.Position(2955,4140)
+Gui.frmLookup.GsGCLookup.Event(RowCellClick,GsGCLookup_RowCellClick)
+Gui.frmLookup.GsGCLookup.Anchor(15)
+Gui.frmLookup.GsGCLookup.TabStop(True)
+Gui.frmLookup.GsGCLookup.TabIndex(17)
+Gui.frmLookup.cmdClear.Create(Button)
+Gui.frmLookup.cmdClear.Size(660,375)
+Gui.frmLookup.cmdClear.Position(2235,360)
+Gui.frmLookup.cmdClear.Caption("Clear")
+Gui.frmLookup.cmdClear.Event(Click,cmdClear_Click)
+Gui.frmLookup.cmdClear.TabStop(True)
+Gui.frmLookup.cmdClear.TabIndex(18)
+Gui.frmLookup.lblStatus.Create(Label,"Loading Assembly....",False,1935,255,0,2940,540,True,0,"Arial",8,-2147483633,0)
+Gui.frmShowAll..Create
+Gui.frmShowAll..Caption("All Parts")
+Gui.frmShowAll..Size(12225,5550)
+Gui.frmShowAll..MinX(0)
+Gui.frmShowAll..MinY(0)
+Gui.frmShowAll..Position(0,0)
+Gui.frmShowAll..BackColor(-2147483633)
+Gui.frmShowAll..MousePointer(0)
+Gui.frmShowAll..Event(UnLoad,frmShowAll_UnLoad)
+Gui.frmShowAll.GsGCShowAll.Create(GsGridControl)
+Gui.frmShowAll.GsGCShowAll.Size(12120,5265)
+Gui.frmShowAll.GsGCShowAll.Position(0,0)
+Gui.frmShowAll.GsGCShowAll.Anchor(15)
+Gui.frmShowWOs..Create
+Gui.frmShowWOs..Caption("Work Order Sequences")
+Gui.frmShowWOs..Size(12225,5550)
+Gui.frmShowWOs..MinX(0)
+Gui.frmShowWOs..MinY(0)
+Gui.frmShowWOs..Position(0,0)
+Gui.frmShowWOs..BackColor(-2147483633)
+Gui.frmShowWOs..MousePointer(0)
+Gui.frmShowWOs..Event(UnLoad,frmShowWOs_UnLoad)
+Gui.frmShowWOs.GsGCShowWOs.Create(GsGridControl)
+Gui.frmShowWOs.GsGCShowWOs.Size(12120,5265)
+Gui.frmShowWOs.GsGCShowWOs.Position(0,0)
+Gui.frmShowWOs.GsGCShowWOs.Anchor(15)
+Gui.frmShowWOs.GsGCShowWOs.Event(RowCellClick,GsGCShowWOs_RowCellClick)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+	V.Global.sOrderNo.Declare
+	V.Global.sOrderSuffix.Declare
+	V.Global.sOrderLine.Declare
+	V.Global.sPckNo.Declare
+	V.Global.bChanged.Declare
+	V.Global.iRowIndex.Declare
+	V.Global.iLoops.Declare
+	V.Global.iLoops.Set(-1)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sIcon.Declare
+	V.Local.sGssLogo.Declare
+	
+	F.ODBC.Connection!con.OpenCompanyConnection(500)
+	
+	F.Intrinsic.String.Build("{0}\gss2.ico",V.Caller.GasDir,V.Local.sIcon)
+	F.Intrinsic.String.Build("{0}\GSS_Logo_Dash_2.png",V.Caller.GasDir,V.Local.sGssLogo)
+	Gui.frmShowAll..Icon(V.Local.sIcon)
+	Gui.frmShowWOs..Icon(V.Local.sIcon)
+	Gui.frmLookup..Icon(V.Local.sIcon)
+	Gui.frmLookup.picGSSLogo.Picture(V.Local.sGssLogo)
+	
+	Gui.frmLookup.optCerts.Value(True)
+	Gui.frmLookup.optPart.Value(True)
+	gui.frmLookup.cboPart.Enabled(false)
+	gui.frmLookup.cboOrderNo.Enabled(false)
+	F.Intrinsic.Control.CallSub(LoadComboboxesPart)
+	F.Intrinsic.Control.CallSub(LoadComboboxesOrder)
+	F.Intrinsic.Control.CallSub(SetContextMenus)
+	gui.frmLookup.cboPart.Enabled(True)
+	gui.frmLookup.cboOrderNo.Enabled(True)
+	
+	Gui.frmLookup..Show
+	Gui.frmLookup.cboPart.SetFocus
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.frmLookup_UnLoad.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.ODBC.Connection!con.Close
+	F.Intrinsic.Control.End
+
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmLookup_UnLoad.End
+
+Program.Sub.SetContextMenus.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmLookup..ContextMenuCreate("ctxSearch")
+	Gui.frmLookup.GsGCSearch.ContextMenuAttach("ctxSearch")
+	Gui.frmLookup..ContextMenuAddItem("ctxSearch","Refresh",0,"Refresh")
+	Gui.frmLookup..ContextMenuAddItem("ctxSearch","Export",0,"Export")
+	Gui.frmLookup..ContextMenuSetItemEventHandler("ctxSearch","Refresh","LoadCboPLBHS")
+	Gui.frmLookup..ContextMenuSetItemEventHandler("ctxSearch","Export","MenuClickExport")
+	
+	Gui.frmLookup..ContextMenuCreate("ctxLookup")
+	Gui.frmLookup.GsGCLookup.ContextMenuAttach("ctxLookup")
+	Gui.frmLookup..ContextMenuAddItem("ctxLookup","Collapse",0,"Collapse All")
+	Gui.frmLookup..ContextMenuAddItem("ctxLookup","Expand",0,"Expand All")
+	Gui.frmLookup..ContextMenuAddItem("ctxLookup","ShowAll",0,"Show All Parts")
+	Gui.frmLookup..ContextMenuAddItem("ctxLookup","ShowWOs",0,"Show WOs")
+	Gui.frmLookup..ContextMenuAddItem("ctxLookup","Print",0,"Print")
+	Gui.frmLookup..ContextMenuAddItem("ctxLookup","Open",0,"Open")
+	Gui.frmLookup..ContextMenuAddItem("ctxLookup","Zip",0,"Zip")
+	Gui.frmLookup..ContextMenuAddItem("ctxLookup","Refresh",0,"Refresh")
+	Gui.frmLookup..ContextMenuAddItem("ctxLookup","Export",0,"Export")
+	Gui.frmLookup..ContextMenuSetItemEventHandler("ctxLookup","Collapse","ExpandCollapse")
+	Gui.frmLookup..ContextMenuSetItemEventHandler("ctxLookup","Expand","ExpandCollapse")
+	Gui.frmLookup..ContextMenuSetItemEventHandler("ctxLookup","ShowAll","ShowAllParts")
+	Gui.frmLookup..ContextMenuSetItemEventHandler("ctxLookup","ShowWOs","ShowWOs")
+	Gui.frmLookup..ContextMenuSetItemEventHandler("ctxLookup","Print","MenuClick")
+	Gui.frmLookup..ContextMenuSetItemEventHandler("ctxLookup","Open","MenuClick")
+	Gui.frmLookup..ContextMenuSetItemEventHandler("ctxLookup","Zip","CreateZip")
+	Gui.frmLookup..ContextMenuSetItemEventHandler("ctxLookup","Refresh","PullData")
+	Gui.frmLookup..ContextMenuSetItemEventHandler("ctxLookup","Export","MenuClickExport")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetContextMenus.End
+
+Program.Sub.ExpandCollapse.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.iCnt.Declare
+	V.Local.iCnt2.Declare
+	V.Local.sDT.Declare
+	
+	F.Intrinsic.Control.If(V.Global.iLoops,<>,-1)
+		F.Intrinsic.Control.If(V.Args.ItemName,=,"COLLAPSE")
+			Gui.frmLookup.GsGCLookup.CollapseMasterRow("0","0")
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Control.For(V.Local.iCnt,0,V.Global.iLoops,1)
+				F.Intrinsic.Control.If(V.Local.iCnt,=,0)
+					V.Local.sDT.Set(V.Local.iCnt)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("{0}${1}",V.Local.sDT,V.Local.iCnt,V.Local.sDT)
+				F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.For(V.Local.iCnt2,0,V.DataTable.[V.Local.sDT].RowCount--,1)
+					Gui.frmLookup.GsGCLookup.ExpandMasterRow(V.Local.iCnt,V.Local.iCnt2)
+				F.Intrinsic.Control.Next(V.Local.iCnt2)
+			F.Intrinsic.Control.Next(V.Local.iCnt)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.ExpandCollapse.End
+
+Program.Sub.MenuClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.iCnt.Declare
+	V.Local.iCnt2.Declare
+	V.Local.sPart.Declare
+	V.Local.sLoc.Declare
+	V.Local.sLot.Declare
+	V.Local.sBin.Declare
+	V.Local.sHeat.Declare
+	V.Local.sSerial.Declare
+	V.Local.sIDLink.Declare
+	V.Local.iIDLink.Declare
+	V.Local.sSql.Declare
+	V.Local.sPath.Declare
+	V.Local.sFile.Declare
+	
+	F.Intrinsic.Control.If(V.DataTable.dtSave.Exists,=,False)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtSave.RowCount--,1)
+		F.Intrinsic.Control.If(V.DataTable.dtSave(V.Local.iCnt).SEL!FieldVal)
+			V.Local.sPart.Set("")
+			V.Local.sLoc.Set("")
+			V.Local.sLot.Set("")
+			V.Local.sBin.Set("")
+			V.Local.sHeat.Set("")
+			V.Local.sSerial.Set("")
+			F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.iCnt).PART!FieldValTrim," ",20,V.Local.sPart)
+			F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.iCnt).LOCATION!FieldValTrim," ",2,V.Local.sLoc)
+			F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.iCnt).LOT!FieldValTrim," ",15,V.Local.sLot)
+			F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.iCnt).BIN!FieldValTrim," ",6,V.Local.sBin)
+			F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.iCnt).HEAT!FieldValTrim," ",15,V.Local.sHeat)
+			F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.iCnt).SERIAL!FieldValTrim," ",30,V.Local.sSerial)
+			F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}",V.Local.sPart,V.Local.sLoc,V.Local.sLot,V.Local.sBin,V.Local.sHeat,V.Local.sSerial,V.Local.sIDlink)
+			F.Global.DocumentControl.GetLinkID(V.Local.sIDLink,31,V.Local.iIDLink)
+			F.Intrinsic.String.Build("Select PATH,FILE from ATG_DOC_ASSOC Where LINK_ID = '{0}';",V.Local.iIDLink,V.Local.sSQL)
+			F.Data.DataTable.CreateFromSQL("dtLink","con",V.Local.sSql,True)
+			F.Intrinsic.Control.For(V.Local.iCnt2,0,V.DataTable.dtLink.RowCount--,1)
+				F.Intrinsic.String.Build("{0}{1}",V.DataTable.dtLink(V.Local.iCnt2).PATH!FieldValTrim,V.DataTable.dtLink(V.Local.iCnt2).FILE!FieldValTrim,V.Local.sFile)
+				F.Intrinsic.task.ShellExec(V.Caller.Handle,V.Args.ItemName,V.local.sFile,"","",5)
+				F.Intrinsic.UI.Sleep(1)
+			F.Intrinsic.Control.Next(V.Local.iCnt2)
+			F.Data.DataTable.Close("dtLink")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.MenuClick.End
+
+Program.Sub.CreateZip.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSql.Declare
+	V.Local.sPath.Declare
+	V.Local.iDocGrp.Declare
+	V.Local.sTargetFile.Declare
+	V.Local.bExists.Declare
+	V.Local.iCnt.Declare
+	V.Local.iCnt2.Declare
+	V.Local.sPart.Declare
+	V.Local.sLoc.Declare
+	V.Local.sLot.Declare
+	V.Local.sBin.Declare
+	V.Local.sHeat.Declare
+	V.Local.sSerial.Declare
+	V.Local.sIDLink.Declare
+	V.Local.iIDLink.Declare
+	V.Local.sPathLink.Declare	
+	V.Local.sSourceFile.Declare
+	V.Local.sMsg.Declare
+	
+	F.Intrinsic.Control.If(V.DataTable.dtSave.Exists,=,False)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.frmLookup!optItem.Value)
+		F.Intrinsic.String.Build("{0}{1}{2}.zip",V.Caller.User,V.Ambient.Date.FormatYYYYMMDD,V.Ambient.Time.FormatHHNNSS,V.Local.sTargetFile)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("{0}{1}{2}.zip",V.Global.sPckNo,V.Global.sOrderNo,V.Global.sOrderSuffix,V.Local.sTargetFile)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.UI.FolderBrowser("Select Directory",,V.Local.sPath)
+	F.Intrinsic.Control.If(V.Local.sPath,<>,"***CANCEL***")
+		F.Intrinsic.String.Build("{0}\{1}",V.Local.sPath,V.Local.sTargetFile,V.Local.sTargetFile)
+		F.Intrinsic.File.Exists(V.Local.sTargetFile,V.Local.bExists)
+		F.Intrinsic.Control.If(V.Local.bExists)
+			F.Intrinsic.File.DeleteFile(V.Local.sTargetFile)
+		F.Intrinsic.Control.EndIf
+	
+	
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtSave.RowCount--,1)
+			F.Intrinsic.Control.If(V.DataTable.dtSave(V.Local.iCnt).SEL!FieldVal)
+				V.Local.sPart.Set("")
+				V.Local.sLoc.Set("")
+				V.Local.sLot.Set("")
+				V.Local.sBin.Set("")
+				V.Local.sHeat.Set("")
+				V.Local.sSerial.Set("")
+				F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.iCnt).PART!FieldValTrim," ",20,V.Local.sPart)
+				F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.iCnt).LOCATION!FieldValTrim," ",2,V.Local.sLoc)
+				F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.iCnt).LOT!FieldValTrim," ",15,V.Local.sLot)
+				F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.iCnt).BIN!FieldValTrim," ",6,V.Local.sBin)
+				F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.iCnt).HEAT!FieldValTrim," ",15,V.Local.sHeat)
+				F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.iCnt).SERIAL!FieldValTrim," ",30,V.Local.sSerial)
+				F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}",V.Local.sPart,V.Local.sLoc,V.Local.sLot,V.Local.sBin,V.Local.sHeat,V.Local.sSerial,V.Local.sIDlink)
+				F.Global.DocumentControl.GetLinkID(V.Local.sIDLink,31,V.Local.iIDLink)
+				F.Intrinsic.String.Build("Select PATH,FILE from ATG_DOC_ASSOC Where LINK_ID = '{0}';",V.Local.iIDLink,V.Local.sSQL)
+				F.Data.DataTable.CreateFromSQL("dtLink","con",V.Local.sSql,True)
+				F.Intrinsic.Control.For(V.Local.iCnt2,0,V.DataTable.dtLink.RowCount--,1)
+					F.Intrinsic.String.Build("{0}{1}",V.DataTable.dtLink(V.Local.iCnt2).PATH!FieldValTrim,V.DataTable.dtLink(V.Local.iCnt2).FILE!FieldValTrim,V.Local.sSourceFile)
+					F.Automation.Zip.Zip(V.Local.sSourceFile,V.Local.sTargetFile)
+				F.Intrinsic.Control.Next(V.Local.iCnt2)
+				F.Data.DataTable.Close("dtLink")
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+		'Email
+		'Can't email if Courier is off - show message and cancel email
+		'Pull Customer - Find Primary Contact and place in the Recipient field - allow customer to change this information as well
+		'Pull user running program to send the email from and check their email
+		
+		F.Intrinsic.String.Build("Zip created: {0}",V.Local.sTargetFile,V.Local.sMsg)
+		F.Intrinsic.UI.Msgbox(V.Local.sMsg)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.CreateZip.End
+
+Program.Sub.MenuClickExport.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sFileExport.Declare
+	V.Local.bExcel.Declare
+	V.Local.bFileLocked.Declare
+	V.Local.sMsg.Declare
+	V.Local.sControl.Declare
+	
+	F.Intrinsic.Control.SelectCase(V.Args.MenuName)
+		F.Intrinsic.Control.Case("CTXSEARCH")
+			V.Local.sControl.Set("GsGCSearch")
+		F.Intrinsic.Control.Case("CTXLOOKUP")
+			V.Local.sControl.Set("GsGCLookup")
+	F.Intrinsic.Control.EndSelect
+
+	F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+	F.Intrinsic.Control.If(V.Local.bExcel)
+		F.Intrinsic.String.Build("{0}\GAB_4842_{1}_Export.xlsx",V.Caller.LocalGssTempDir,V.Local.sControl,V.Local.sFileExport)
+		F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+		F.Intrinsic.Control.If(V.Local.bFileLocked)
+			F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+			F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+		F.Intrinsic.Control.Else
+			Gui.frmLookup.[V.Local.sControl].Export(V.Local.sFileExport,"xlsx")
+			F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("{0}\GAB_4842_{1}_Export.csv",V.Caller.LocalGssTempDir,V.Local.sControl,V.Local.sFileExport)
+		F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+		F.Intrinsic.Control.If(V.Local.bFileLocked)
+			F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+			F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+		F.Intrinsic.Control.Else
+			Gui.frmLookup.[V.Local.sControl].Export(V.Local.sFileExport,"csv")
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickExport.End
+
+Program.Sub.Options.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.Intrinsic.Control.CallSub(cmdClear_Click)
+	
+	F.Intrinsic.Control.If(V.Screen.frmLookup!optItem.Value)
+		Gui.frmLookup.optPart.Value(True)
+		F.Intrinsic.Control.CallSub(Searches)
+		Gui.frmLookup.cboCustPO.Enabled(False)
+		Gui.frmLookup.cboInvoice.Enabled(False)
+		Gui.frmLookup.cboOrderNo.Enabled(False)
+		Gui.frmLookup.optCustPO.Enabled(False)
+		Gui.frmLookup.optInvoice.Enabled(False)
+		Gui.frmLookup.optOrderNo.Enabled(False)
+	F.Intrinsic.Control.Else
+		Gui.frmLookup.optPart.Value(True)
+		F.Intrinsic.Control.CallSub(Searches)
+		Gui.frmLookup.optCustPO.Enabled(True)
+		Gui.frmLookup.optInvoice.Enabled(True)
+		Gui.frmLookup.optOrderNo.Enabled(True)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Options.End
+
+Program.Sub.Searches.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.Intrinsic.Control.CallSub(cmdClear_Click)
+	
+	F.Intrinsic.Control.If(V.Screen.frmLookup!optPart.Value)
+		Gui.frmLookup.cboPart.Enabled(True)
+		Gui.frmLookup.cboLoc.Enabled(True)
+		Gui.frmLookup.cboLot.Enabled(True)
+		Gui.frmLookup.cboBin.Enabled(True)
+		Gui.frmLookup.cboHeat.Enabled(True)
+		Gui.frmLookup.cboSerial.Enabled(True)
+		Gui.frmLookup.cboCustPO.Enabled(False)
+		Gui.frmLookup.cboInvoice.Enabled(False)
+		Gui.frmLookup.cboOrderNo.Enabled(False)
+	F.Intrinsic.Control.ElseIf(V.Screen.frmLookup!optCustPO.Value)
+		Gui.frmLookup.cboPart.Enabled(False)
+		Gui.frmLookup.cboLoc.Enabled(False)
+		Gui.frmLookup.cboLot.Enabled(False)
+		Gui.frmLookup.cboBin.Enabled(False)
+		Gui.frmLookup.cboHeat.Enabled(False)
+		Gui.frmLookup.cboSerial.Enabled(False)
+		Gui.frmLookup.cboCustPO.Enabled(True)
+		Gui.frmLookup.cboInvoice.Enabled(False)
+		Gui.frmLookup.cboOrderNo.Enabled(False)
+	F.Intrinsic.Control.ElseIf(V.Screen.frmLookup!optInvoice.Value)
+		Gui.frmLookup.cboPart.Enabled(False)
+		Gui.frmLookup.cboLoc.Enabled(False)
+		Gui.frmLookup.cboLot.Enabled(False)
+		Gui.frmLookup.cboBin.Enabled(False)
+		Gui.frmLookup.cboHeat.Enabled(False)
+		Gui.frmLookup.cboSerial.Enabled(False)
+		Gui.frmLookup.cboCustPO.Enabled(False)
+		Gui.frmLookup.cboInvoice.Enabled(True)
+		Gui.frmLookup.cboOrderNo.Enabled(False)
+	F.Intrinsic.Control.ElseIf(V.Screen.frmLookup!optOrderNo.Value)
+		Gui.frmLookup.cboPart.Enabled(False)
+		Gui.frmLookup.cboLoc.Enabled(False)
+		Gui.frmLookup.cboLot.Enabled(False)
+		Gui.frmLookup.cboBin.Enabled(False)
+		Gui.frmLookup.cboHeat.Enabled(False)
+		Gui.frmLookup.cboSerial.Enabled(False)
+		Gui.frmLookup.cboCustPO.Enabled(False)
+		Gui.frmLookup.cboInvoice.Enabled(False)
+		Gui.frmLookup.cboOrderNo.Enabled(True)
+	F.Intrinsic.Control.EndIf
+	
+	Gui.frmLookup.cboPart.Text("")
+	Gui.frmLookup.cboLoc.Text("")
+	Gui.frmLookup.cboLot.Text("")
+	Gui.frmLookup.cboBin.Text("")
+	Gui.frmLookup.cboHeat.Text("")
+	Gui.frmLookup.cboSerial.Text("")
+	Gui.frmLookup.cboCustPO.Text("")
+	Gui.frmLookup.cboInvoice.Text("")
+	Gui.frmLookup.cboOrderNo.Text("")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Searches.End
+
+Program.Sub.cmdClear_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.iCnt.Declare
+	
+	F.Intrinsic.Control.CallSub(LoadComboboxesPart)
+
+	Gui.frmLookup.cboPart.Text("")
+	Gui.frmLookup.cboLoc.Text("")
+	Gui.frmLookup.cboLot.Text("")
+	Gui.frmLookup.cboBin.Text("")
+	Gui.frmLookup.cboHeat.Text("")
+	Gui.frmLookup.cboSerial.Text("")
+	Gui.frmLookup.cboCustPO.Text("")
+	Gui.frmLookup.cboInvoice.Text("")
+	Gui.frmLookup.cboOrderNo.Text("")
+	
+	F.Intrinsic.Control.If(V.DataTable.dtSearch.Exists)
+		Gui.frmLookup.GsGCSearch.ClearRows("gvSearch")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.For(V.Local.iCnt,V.Global.iLoops,0,-1)
+		Gui.frmLookup.GsGCLookup.ClearRows(V.Local.iCnt)
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdClear_Click.End
+
+Program.Sub.LoadComboboxesPart.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	Gui.frmLookup.cmdClear.Enabled(False)
+	Gui.frmLookup.frameOptions.Enabled(False)
+	gui.frmLookup.cboPart.Enabled(false)
+	
+'Item History
+	F.Intrinsic.Control.If(V.DataTable.dtInv.Exists,=,False)
+		F.Data.DataTable.CreateFromSQL("dtInv","con","Select RTrim(Part) As Part,RTrim(Location) As Location,RTrim(Lot) As Lot,RTrim(Bin) As Bin,RTrim(Heat) As Heat,RTrim(Serial_Number) As Serial_Number From V_Item_History Order BY 1,2,3,4,5,6;",True)
+	F.Intrinsic.Control.EndIf
+	'Part Numbers
+	F.Data.DataView.Create("dtInv","dvInv",22,"","Part")
+	F.Data.Dictionary.CreateFromDataView("dPart","dtInv","dvInv","Part","Part",4)
+	Gui.frmLookup.cboPart.ClearItems
+	Gui.frmLookup.cboPart.AddItems("Dictionary","dPart")
+	F.Data.Dictionary.Close("dPart")
+	F.Data.DataView.Close("dtInv","dvInv")
+	'Loc
+	F.Data.DataView.Create("dtInv","dvInv",22,"","Location")
+	F.Data.Dictionary.CreateFromDataView("dLoc","dtInv","dvInv","Location","Location",4)
+	Gui.frmLookup.cboLoc.ClearItems
+	Gui.frmLookup.cboLoc.AddItems("Dictionary","dLoc")
+	F.Data.Dictionary.Close("dLoc")
+	F.Data.DataView.Close("dtInv","dvInv")
+	'Lot
+	F.Data.DataView.Create("dtInv","dvInv",22,"","Lot")
+	F.Data.Dictionary.CreateFromDataView("dLot","dtInv","dvInv","Lot","Lot",4)
+	Gui.frmLookup.cboLot.ClearItems
+	Gui.frmLookup.cboLot.AddItems("Dictionary","dLot")
+	F.Data.Dictionary.Close("dLot")
+	F.Data.DataView.Close("dtInv","dvInv")
+	'Bin
+	F.Data.DataView.Create("dtInv","dvInv",22,"","Bin")
+	F.Data.Dictionary.CreateFromDataView("dBin","dtInv","dvInv","Bin","Bin",4)
+	Gui.frmLookup.cboBin.ClearItems
+	Gui.frmLookup.cboBin.AddItems("Dictionary","dBin")
+	F.Data.Dictionary.Close("dBin")
+	F.Data.DataView.Close("dtInv","dvInv")
+	'Heat
+	F.Data.DataView.Create("dtInv","dvInv",22,"","Heat")
+	F.Data.Dictionary.CreateFromDataView("dHeat","dtInv","dvInv","Heat","Heat",4)
+	Gui.frmLookup.cboHeat.ClearItems
+	Gui.frmLookup.cboHeat.AddItems("Dictionary","dHeat")
+	F.Data.Dictionary.Close("dHeat")
+	F.Data.DataView.Close("dtInv","dvInv")
+	'Serial Numbers
+	F.Data.DataView.Create("dtInv","dvInv",22,"","Serial_Number")
+	F.Data.Dictionary.CreateFromDataView("dSerial","dtInv","dvInv","Serial_Number","Serial_Number",4)
+	Gui.frmLookup.cboSerial.ClearItems
+	Gui.frmLookup.cboSerial.AddItems("Dictionary","dSerial")
+	F.Data.Dictionary.Close("dSerial")
+	F.Data.DataView.Close("dtInv","dvInv")
+	
+	gui.frmLookup.cboPart.Enabled(true)
+	Gui.frmLookup.cmdClear.Enabled(True)
+	Gui.frmLookup.frameOptions.Enabled(True)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadComboboxesPart.End
+
+Program.Sub.LoadComboboxesOrder.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	F.Intrinsic.Control.If(V.DataTable.dtOrderHist.Exists)
+		F.Data.DataTable.Close("dtOrderHist")
+	F.Intrinsic.Control.EndIf
+	
+'Order History
+	F.Data.DataTable.CreateFromSQL("dtOrderHist","con","Select RTrim(Customer_PO) As Customer_PO,Invoice,Order_No From V_Shipment_Header Union Select RTrim(Customer_PO) As Customer_PO,Invoice,Order_No From V_Order_Hist_Line Order By 1,2,3;",True)
+	'Customer PO
+	F.Data.DataView.Create("dtOrderHist","dvOrderHist",22,"","Customer_PO")
+	F.Data.Dictionary.CreateFromDataView("dCustPOs","dtOrderHist","dvOrderHist","Customer_PO","Customer_PO",4)
+	Gui.frmLookup.cboCustPO.AddItems("Dictionary","dCustPOs")
+	F.Data.Dictionary.Close("dCustPOs")
+	F.Data.DataView.Close("dtOrderHist","dvOrderHist")
+	'Invoice
+	F.Data.DataView.Create("dtOrderHist","dvOrderHist",22,"","Invoice")
+	F.Data.Dictionary.CreateFromDataView("dInvoice","dtOrderHist","dvOrderHist","Invoice","Invoice",4)
+	Gui.frmLookup.cboInvoice.AddItems("Dictionary","dInvoice")
+	F.Data.Dictionary.Close("dInvoice")
+	F.Data.DataView.Close("dtOrderHist","dvOrderHist")
+	'Order Numbers
+	F.Data.DataView.Create("dtOrderHist","dvOrderHist",22,"","Order_No")
+	F.Data.Dictionary.CreateFromDataView("dOrderNo","dtOrderHist","dvOrderHist","Order_No","Order_No",4)
+	Gui.frmLookup.cboOrderNo.AddItems("Dictionary","dOrderNo")
+	F.Data.Dictionary.Close("dOrderNo")
+	F.Data.DataView.Close("dtOrderHist","dvOrderHist")
+	
+'Shipped and History Customer POs
+	F.Intrinsic.Control.If(V.DataTable.dtCustPO.Exists,=,False)
+		F.Data.DataTable.CreateFromSQL("dtCustPO","con","Select Order_No+Order_Suffix As OrdKey,Customer_PO From V_Shipment_Header Union Select Order_No+Order_Suffix As OrdKey,Customer_PO From V_Order_Hist_Line;",True)
+		F.Data.Dictionary.CreateFromDataTable("dCustPO","dtCustPO","OrdKey","Customer_PO",4)
+		F.Data.Dictionary.SetDefaultReturn("dCustPO","")
+	F.Intrinsic.Control.EndIf
+	
+'Product Lines
+	'Inventory
+	F.Data.Dictionary.CreateFromSQL("dInvPL","con","Select Part+Location,Product_Line From V_Inventory_Mstr Order By Part,Location;")
+	F.Data.Dictionary.SetDefaultReturn("dInvPL","")
+	'Orders
+	F.Data.Dictionary.CreateFromSQL("dOrdPL","con","Select Order_No+Order_Suffix+Order_Rec As OrdKey2,Product_Line From V_Shipment_Lines Union Select Order_No+Order_Suffix+Order_Line As OrdKey2,Product_Line From V_Order_Hist_Line;")
+	F.Data.Dictionary.SetDefaultReturn("dOrdPL","")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadComboboxesOrder.End
+
+Program.Sub.LoadCboPLBHS.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	V.Local.sPart.Declare
+	V.Local.sLoc.Declare
+	V.Local.sLot.Declare
+	V.Local.sBin.Declare
+	V.Local.sHeat.Declare
+	V.Local.sSerial.Declare
+	V.Local.sFilter.Declare
+	V.Local.iCnt.Declare
+	
+	F.Intrinsic.Control.If(V.Global.bChanged,=,False)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	V.Global.bChanged.Set(False)
+	
+	F.Intrinsic.Control.If(V.Global.iLoops,<>,-1)
+		F.Intrinsic.Control.For(V.Local.iCnt,V.Global.iLoops,0,-1)
+			Gui.frmLookup.GsGCLookup.ClearRows(V.Local.iCnt)
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+	F.Intrinsic.Control.EndIf
+	
+	V.Local.sPart.Set(V.Screen.frmLookup!cboPart.Text)
+	V.Local.sLot.Set(V.Screen.frmLookup!cboLot.Text)
+	V.Local.sBin.Set(V.Screen.frmLookup!cboBin.Text)
+	V.Local.sHeat.Set(V.Screen.frmLookup!cboHeat.Text)
+	V.Local.sSerial.Set(V.Screen.frmLookup!cboSerial.Text)
+	
+	Gui.frmLookup.cboPart.Text(V.Local.sPart.UCase)
+	
+	V.Local.sFilter.Set("")
+	'Part
+	F.Intrinsic.Control.If(V.Local.sPart,<>,"")
+		F.Intrinsic.String.Build("Part = '{0}'",V.Local.sPart,V.Local.sFilter)
+	F.Intrinsic.Control.EndIf
+	'Loc
+	F.Intrinsic.Control.If(V.Local.sLoc,<>,"")
+		F.Intrinsic.Control.If(V.Local.sFilter,=,"")
+			F.Intrinsic.String.Build("Location = '{0}'",V.Local.sLoc,V.Local.sFilter)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0} And Location = '{1}'",V.Local.sFilter,V.Local.sLoc,V.Local.sFilter)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	'Lot
+	F.Intrinsic.Control.If(V.Local.sLot,<>,"")
+		F.Intrinsic.Control.If(V.Local.sFilter,=,"")
+			F.Intrinsic.String.Build("Lot = '{0}'",V.Local.sLot,V.Local.sFilter)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0} And Lot = '{1}'",V.Local.sFilter,V.Local.sLot,V.Local.sFilter)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	'Bin
+	F.Intrinsic.Control.If(V.Local.sBin,<>,"")
+		F.Intrinsic.Control.If(V.Local.sFilter,=,"")
+			F.Intrinsic.String.Build("Bin = '{0}'",V.Local.sBin,V.Local.sFilter)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0} And Bin = '{1}'",V.Local.sFilter,V.Local.sBin,V.Local.sFilter)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	'Heat
+	F.Intrinsic.Control.If(V.Local.sHeat,<>,"")
+		F.Intrinsic.Control.If(V.Local.sFilter,=,"")
+			F.Intrinsic.String.Build("Heat = '{0}'",V.Local.sHeat,V.Local.sFilter)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0} And Heat = '{1}'",V.Local.sFilter,V.Local.sHeat,V.Local.sFilter)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	'Serial
+	F.Intrinsic.Control.If(V.Local.sSerial,<>,"")
+		F.Intrinsic.Control.If(V.Local.sFilter,=,"")
+			F.Intrinsic.String.Build("Serial_Number = '{0}'",V.Local.sSerial,V.Local.sFilter)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0} And Serial_Number = '{1}'",V.Local.sFilter,V.Local.sSerial,V.Local.sFilter)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Local.sFilter,=,"")
+		F.Intrinsic.Control.CallSub(LoadComboboxesPart)
+	F.Intrinsic.Control.Else
+		'Part Numbers
+		F.Data.DataView.Create("dtInv","dvInv",22,V.Local.sFilter,"Part")
+		F.Data.Dictionary.CreateFromDataView("dPart","dtInv","dvInv","Part","Part",4)
+		Gui.frmLookup.cboPart.ClearItems
+		Gui.frmLookup.cboPart.AddItems("Dictionary","dPart")
+		F.Data.Dictionary.Close("dPart")
+		F.Data.DataView.Close("dtInv","dvInv")
+		'Lot
+		F.Data.DataView.Create("dtInv","dvInv",22,V.Local.sFilter,"Location")
+		F.Data.Dictionary.CreateFromDataView("dLoc","dtInv","dvInv","Location","Location",4)
+		Gui.frmLookup.cboLot.ClearItems
+		Gui.frmLookup.cboLot.AddItems("Dictionary","dLoc")
+		F.Data.Dictionary.Close("dLoc")
+		F.Data.DataView.Close("dtInv","dvInv")
+		'Lot
+		F.Data.DataView.Create("dtInv","dvInv",22,V.Local.sFilter,"Lot")
+		F.Data.Dictionary.CreateFromDataView("dLot","dtInv","dvInv","Lot","Lot",4)
+		Gui.frmLookup.cboLot.ClearItems
+		Gui.frmLookup.cboLot.AddItems("Dictionary","dLot")
+		F.Data.Dictionary.Close("dLot")
+		F.Data.DataView.Close("dtInv","dvInv")
+		'Bin
+		F.Data.DataView.Create("dtInv","dvInv",22,V.Local.sFilter,"Bin")
+		F.Data.Dictionary.CreateFromDataView("dBin","dtInv","dvInv","Bin","Bin",4)
+		Gui.frmLookup.cboBin.ClearItems
+		Gui.frmLookup.cboBin.AddItems("Dictionary","dBin")
+		F.Data.Dictionary.Close("dBin")
+		F.Data.DataView.Close("dtInv","dvInv")
+		'Heat
+		F.Data.DataView.Create("dtInv","dvInv",22,V.Local.sFilter,"Heat")
+		F.Data.Dictionary.CreateFromDataView("dHeat","dtInv","dvInv","Heat","Heat",4)
+		Gui.frmLookup.cboHeat.ClearItems
+		Gui.frmLookup.cboHeat.AddItems("Dictionary","dHeat")
+		F.Data.Dictionary.Close("dHeat")
+		F.Data.DataView.Close("dtInv","dvInv")
+		'Serial Numbers
+		F.Data.DataView.Create("dtInv","dvInv",22,V.Local.sFilter,"Serial_Number")
+		F.Data.Dictionary.CreateFromDataView("dSerial","dtInv","dvInv","Serial_Number","Serial_Number",4)
+		Gui.frmLookup.cboSerial.ClearItems
+		Gui.frmLookup.cboSerial.AddItems("Dictionary","dSerial")
+		F.Data.Dictionary.Close("dSerial")
+		F.Data.DataView.Close("dtInv","dvInv")
+		
+		F.Intrinsic.Control.CallSub(LoadSearch)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadCboPLBHS.End
+
+Program.Sub.cboCustPO_LostFocus.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	F.Intrinsic.Control.If(V.Screen.frmLookup!cboCustPO.Text,=,"")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.CallSub(LoadSearch)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cboCustPO_LostFocus.End
+
+Program.Sub.cboInvoice_LostFocus.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	F.Intrinsic.Control.If(V.Screen.frmLookup!cboInvoice.Text,=,"")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.CallSub(LoadSearch)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cboInvoice_LostFocus.End
+
+Program.Sub.cboOrderNo_LostFocus.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	F.Intrinsic.Control.If(V.Screen.frmLookup!cboOrderNo.Text,=,"")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.CallSub(LoadSearch)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cboOrderNo_LostFocus.End
+
+Program.Sub.Changed.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	V.Global.bChanged.Set(True)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Changed.End
+
+Program.Sub.LoadSearch.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sPart.Declare
+	V.Local.sLot.Declare
+	V.Local.sBin.Declare
+	V.Local.sHeat.Declare
+	V.Local.sSerial.Declare
+	V.Local.sFilter.Declare
+	V.Local.sHeaderColor.Declare
+	V.Local.sColumnColor.Declare
+	
+	V.Local.sHeaderColor.Set("109, 187, 126")
+	V.Local.sColumnColor.Set("171, 216, 181")
+	
+	V.Local.sPart.Set(V.Screen.frmLookup!cboPart.Text)
+	V.Local.sLot.Set(V.Screen.frmLookup!cboLot.Text)
+	V.Local.sBin.Set(V.Screen.frmLookup!cboBin.Text)
+	V.Local.sHeat.Set(V.Screen.frmLookup!cboHeat.Text)
+	V.Local.sSerial.Set(V.Screen.frmLookup!cboSerial.Text)
+	
+	
+	F.Intrinsic.Control.If(V.DataTable.dtSearch.Exists)
+		F.Data.DataTable.Close("dtSearch")
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.Screen.frmLookup!optPart.Value)
+		V.Local.sFilter.Set("")
+		'Part
+		F.Intrinsic.Control.If(V.Local.sPart,<>,"")
+			F.Intrinsic.String.Build("Part = '{0}'",V.Local.sPart,V.Local.sFilter)
+		F.Intrinsic.Control.EndIf
+		'Lot
+		F.Intrinsic.Control.If(V.Local.sLot,<>,"")
+			F.Intrinsic.Control.If(V.Local.sFilter,=,"")
+				F.Intrinsic.String.Build("Lot = '{0}'",V.Local.sLot,V.Local.sFilter)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("{0} And Lot = '{1}'",V.Local.sFilter,V.Local.sLot,V.Local.sFilter)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		'Bin
+		F.Intrinsic.Control.If(V.Local.sBin,<>,"")
+			F.Intrinsic.Control.If(V.Local.sFilter,=,"")
+				F.Intrinsic.String.Build("Bin = '{0}'",V.Local.sBin,V.Local.sFilter)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("{0} And Bin = '{1}'",V.Local.sFilter,V.Local.sBin,V.Local.sFilter)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		'Heat
+		F.Intrinsic.Control.If(V.Local.sHeat,<>,"")
+			F.Intrinsic.Control.If(V.Local.sFilter,=,"")
+				F.Intrinsic.String.Build("Heat = '{0}'",V.Local.sHeat,V.Local.sFilter)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("{0} And Heat = '{1}'",V.Local.sFilter,V.Local.sHeat,V.Local.sFilter)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		'Serial
+		F.Intrinsic.Control.If(V.Local.sSerial,<>,"")
+			F.Intrinsic.Control.If(V.Local.sFilter,=,"")
+				F.Intrinsic.String.Build("Serial = '{0}'",V.Local.sSerial,V.Local.sFilter)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("{0} And Serial = '{1}'",V.Local.sFilter,V.Local.sSerial,V.Local.sFilter)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		'Exit if nothing is entered
+		F.Intrinsic.Control.If(V.Local.sFilter,=,"")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.ElseIf(V.Screen.frmLookup!optCustPO.Value)
+		F.Intrinsic.Control.If(V.Screen.frmLookup!cboCustPO.Text,=,"")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("Customer_PO = '{0}'",V.Screen.frmLookup!cboCustPO.Text,V.Local.sFilter)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.ElseIf(V.Screen.frmLookup!optInvoice.Value)
+		F.Intrinsic.Control.If(V.Screen.frmLookup!cboInvoice.Text,=,"")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("Invoice = '{0}'",V.Screen.frmLookup!cboInvoice.Text,V.Local.sFilter)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.ElseIf(V.Screen.frmLookup!optOrderNo.Value)
+		F.Intrinsic.Control.If(V.Screen.frmLookup!cboOrderNo.Text,=,"")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("Order_No = '{0}'",V.Screen.frmLookup!cboOrderNo.Text,V.Local.sFilter)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.frmLookup!optItem.Value)
+		F.Data.DataTable.CreateFromSQL("dtSearch","con","Select Code_Transaction,Part,Location,'' As ProdLine,RTrim(Lot) As Lot,RTrim(Bin) As Bin,RTrim(Heat) As Heat,RTrim(Serial_Number) As Serial,Case Purchase_Order When '0000000' Then '' Else Purchase_Order End As PO,PO_Line,Job,Suffix,Case Sequence When '000000' Then '' Else Sequence End As Seq,Case Order_No When '0000000' Then '' Else Order_No End As Order_No,Case Order_Line When '000' Then '' Else Order_Line End As Order_Line,Case Invoice When '0000000' Then '' Else Invoice End As Invoice,Quantity,Date_History,Part+Location As PartLoc From V_Item_History Order By Date_History Desc;",True)
+		F.Data.DataTable.FillFromDictionary("dtSearch","dInvPL","PartLoc","ProdLine")
+		F.Data.DataTable.RemoveColumn("dtSearch","PartLoc")
+		F.Data.DataView.Create("dtSearch","dvSearch",22,V.Local.sFilter,"")
+		
+		
+		Gui.frmLookup.GsGCSearch.AddGridviewFromDataview("gvSearch","dtSearch","dvSearch")
+		Gui.frmLookup.GsGCSearch.SuspendLayout()
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","MultiSelect",True)
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","AllowSort",True)
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","AllowFilter",True)
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","Editable",False)
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","ReadOnly",True)
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","ShowGroupPanel",False)
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","OptionsSelectionEnableAppearanceFocusedRow",False)
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Code_Transaction","Caption","Trans Code")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","Caption","Part")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","Caption","Loc")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","Caption","PL")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","Caption","Lot")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","Caption","Bin")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","Caption","Heat")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","Caption","Serial")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO","Caption","PO")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO_Line","Caption","PO Line")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Job","Caption","WO")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Suffix","Caption","Suffix")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Seq","Caption","Seq")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","Caption","Order No")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","Caption","Order Line")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","Caption","Invoice")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Quantity","Caption","Quantity")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_History","Caption","Date History")
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Code_Transaction","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","MinWidth","150")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","MinWidth","45")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","MinWidth","45")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","MinWidth","150")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO_Line","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Job","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Suffix","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Seq","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Quantity","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_History","MinWidth","90")
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Code_Transaction","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO_Line","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Job","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Suffix","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Seq","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Quantity","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_History","HeaderFontBold",True)
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Code_Transaction","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO_Line","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Job","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Suffix","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Seq","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Quantity","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_History","HeaderHAlignment","Center")
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Code_Transaction","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO_Line","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Job","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Suffix","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Seq","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_History","CellHAlignment","Center")
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","CellForeColor","Blue")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","CellForeColor","Blue")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","CellForeColor","Blue")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","CellForeColor","Blue")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","CellForeColor","Blue")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","CellForeColor","Blue")
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Code_Transaction","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO_Line","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Job","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Suffix","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Seq","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Quantity","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_History","HeaderBackColor",V.Local.sHeaderColor)
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Code_Transaction","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","PO_Line","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Job","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Suffix","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Seq","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Quantity","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_History","CellBackColor",V.Local.sColumnColor)
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Quantity","DisplayCustomNumeric","#,###,##0.0000")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_History","DisplayCustomDatetime","d")
+		
+		Gui.frmLookup.GsGCSearch.ResumeLayout()
+		Gui.frmLookup.GsGCSearch.MainView("gvSearch")
+	F.Intrinsic.Control.Else
+		F.Data.DataTable.CreateFromSQL("dtSearch","con","Select '' As Customer_PO,Invoice,Order_No,Order_Suffix,Left(Order_Line,3) As Order_Line,Key_Seq,Part,Locn As Location,'' As ProdLine,RTrim(Lot) As Lot,RTrim(Bin) As Bin,RTrim(Heat) As Heat,RTrim(Serial) As Serial,Qty_Shipped,Date_Shipped,Order_No+Order_Suffix As OrdKey,Order_No+Order_Suffix+Order_Line As OrdKey2 From V_Order_Hist_Lot Order By Date_Shipped Desc,2,3,4,5,1;",True)
+		F.Data.DataTable.FillFromDictionary("dtSearch","dCustPO","OrdKey","Customer_PO")
+		F.Data.DataTable.FillFromDictionary("dtSearch","dOrdPL","OrdKey2","ProdLine")
+		F.Data.DataView.Create("dtSearch","dvSearch",22,V.Local.sFilter,"")
+		F.Data.DataTable.RemoveColumn("dtSearch","Key_Seq")
+		F.Data.DataTable.RemoveColumn("dtSearch","OrdKey")
+		F.Data.DataTable.RemoveColumn("dtSearch","OrdKey2")
+		
+		Gui.frmLookup.GsGCSearch.AddGridviewFromDataview("gvSearch","dtSearch","dvSearch")
+		Gui.frmLookup.GsGCSearch.SuspendLayout()
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","MultiSelect",True)
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","AllowSort",True)
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","AllowFilter",True)
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","Editable",False)
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","ReadOnly",True)
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","ShowGroupPanel",False)
+		Gui.frmLookup.GsGCSearch.SetGridViewProperty("gvSearch","OptionsSelectionEnableAppearanceFocusedRow",False)
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Suffix","Visible",False)
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Customer_PO","Caption","Customer PO")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","Caption","Invoice")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","Caption","Order No")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Suffix","Caption","Order Suf")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","Caption","Order Line")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","Caption","Part")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","Caption","Loc")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","Caption","PL")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","Caption","Lot")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","Caption","Bin")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","Caption","Heat")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","Caption","Serial")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Qty_Shipped","Caption","Qty Shipped")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_Shipped","Caption","Date Shipped")
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Customer_PO","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Suffix","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","MinWidth","150")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","MinWidth","150")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Qty_Shipped","MinWidth","90")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_Shipped","MinWidth","90")
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Customer_PO","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Suffix","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Qty_Shipped","HeaderFontBold",True)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_Shipped","HeaderFontBold",True)
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Customer_PO","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Suffix","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Qty_Shipped","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_Shipped","HeaderHAlignment","Center")
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Customer_PO","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Suffix","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","CellHAlignment","Center")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_Shipped","CellHAlignment","Center")
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","CellForeColor","Blue")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","CellForeColor","Blue")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","CellForeColor","Blue")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","CellForeColor","Blue")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","CellForeColor","Blue")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","CellForeColor","Blue")
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Customer_PO","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Suffix","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Qty_Shipped","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_Shipped","HeaderBackColor",V.Local.sHeaderColor)
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Customer_PO","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Invoice","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Suffix","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_Line","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Part","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Location","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","ProdLine","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Lot","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Bin","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Heat","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Serial","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Qty_Shipped","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_Shipped","CellBackColor",V.Local.sColumnColor)
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Order_No","DisplayCustomString","000")
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Qty_Shipped","DisplayCustomNumeric","#,###,##0.00")
+		
+		Gui.frmLookup.GsGCSearch.SetColumnProperty("gvSearch","Date_Shipped","DisplayCustomDatetime","d")
+		
+		Gui.frmLookup.GsGCSearch.ResumeLayout()
+		Gui.frmLookup.GsGCSearch.MainView("gvSearch")
+	F.Intrinsic.Control.EndIf
+	
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadSearch.End
+
+Program.Sub.GsGCSearch_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sPart.Declare
+	V.Local.sLoc.Declare
+	V.Local.sLot.Declare
+	V.Local.sBin.Declare
+	V.Local.sHeat.Declare
+	V.Local.sSerial.Declare
+	V.Local.sLinkID.Declare
+	V.Local.iPID.Declare
+
+	F.Intrinsic.Control.SelectCase(V.Args.Column)
+		F.Intrinsic.Control.CaseAny("Part","PART","Location","LOCATION")
+			F.Intrinsic.Control.BlockEvents
+			Gui.frmLookup.lblStatus.Visible(True)
+			Gui.frmLookup.GsGCSearch.Enabled(False)
+			F.Intrinsic.Control.If(V.Screen.frmLookup!optItem.Value)
+				V.Global.iRowIndex.Set(V.Args.RowIndex)
+			F.Intrinsic.Control.Else
+				V.Global.sOrderNo.Set(V.DataTable.dtSearch(V.Args.RowIndex).Order_No!FieldVal)
+				V.Global.sOrderSuffix.Set(V.DataTable.dtSearch(V.Args.RowIndex).Order_Suffix!FieldVal)
+				V.Global.sOrderLine.Set(V.DataTable.dtSearch(V.Args.RowIndex).Order_Line!FieldVal)
+				F.Intrinsic.String.Build("{0}0",V.Global.sOrderLine,V.Global.sOrderLine)
+			F.Intrinsic.Control.EndIf
+			
+			F.Intrinsic.Control.CallSub(PullData)
+			Gui.frmLookup.GsGCSearch.Enabled(True)
+			Gui.frmLookup.lblStatus.Visible(False)
+			F.Intrinsic.Control.UnBlockEvents
+			
+		F.Intrinsic.Control.CaseAny("Lot","LOT","Bin","BIN","Heat","HEAT","Serial","SERIAL")
+			F.Intrinsic.String.RPad(V.DataTable.dtSearch(V.Args.RowIndex).PART!FieldValTrim," ",20,V.Local.sPart)
+			F.Intrinsic.String.RPad(V.DataTable.dtSearch(V.Args.RowIndex).LOCATION!FieldValTrim," ",2,V.Local.sLoc)
+			F.Intrinsic.String.RPad(V.DataTable.dtSearch(V.Args.RowIndex).LOT!FieldValTrim," ",15,V.Local.sLot)
+			F.Intrinsic.String.RPad(V.DataTable.dtSearch(V.Args.RowIndex).BIN!FieldValTrim," ",6,V.Local.sBin)
+			F.Intrinsic.String.RPad(V.DataTable.dtSearch(V.Args.RowIndex).HEAT!FieldValTrim," ",15,V.Local.sHeat)
+			F.Intrinsic.String.RPad(V.DataTable.dtSearch(V.Args.RowIndex).SERIAL!FieldValTrim," ",30,V.Local.sSerial)
+			F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}",V.Local.sPart,V.Local.sLoc,V.Local.sLot,V.Local.sBin,V.Local.sHeat,V.Local.sSerial,V.Local.sLinkID)
+			F.Global.DocumentControl.Invoke(V.Local.sLinkID,31,"Item Master....",V.Local.iPID)
+	F.Intrinsic.Control.EndSelect
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCSearch_RowCellClick.End
+
+Program.Sub.PullData.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare
+	V.Local.sCust.Declare
+	V.Local.iCnt.Declare
+	V.Local.iCnt2.Declare
+	V.Local.iCnt3.Declare
+	V.Local.iCnt4.Declare
+	V.Local.sPart.Declare
+	V.Local.sLoc.Declare
+	V.Local.sLot.Declare
+	V.Local.sBin.Declare
+	V.Local.sHeat.Declare
+	V.Local.sSerial.Declare
+	V.Local.sJob.Declare
+	V.Local.sSuffix.Declare
+	V.Local.sCodeTrans.Declare
+	V.Local.sSeq.Declare
+	V.Local.iCodeChk.Declare(Long,0)
+	V.Local.iID.Declare(Long,1)
+	V.Local.sSelect.Declare
+	V.Local.sExp.Declare
+	V.Local.sSelect2.Declare
+	F.Intrinsic.Control.If(V.DataTable.dtSave.Exists)
+		F.Data.DataTable.Close("dtSave")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Global.iLoops,<>,-1)
+		F.Intrinsic.Control.For(V.Local.iCnt,V.Global.iLoops,0,-1)
+			Gui.frmLookup.GsGCLookup.ClearRows(V.Local.iCnt)
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+	F.Intrinsic.Control.EndIf
+	
+	
+	
+	F.Intrinsic.Control.If(V.Screen.frmLookup!optItem.Value)
+		V.Local.sPart.Set(V.DataTable.dtSearch(V.Global.iRowIndex).Part!FieldValTrim)
+		V.Local.sLoc.Set(V.DataTable.dtSearch(V.Global.iRowIndex).Location!FieldValTrim)
+		V.Local.sLot.Set(V.DataTable.dtSearch(V.Global.iRowIndex).Lot!FieldValTrim)
+		V.Local.sBin.Set(V.DataTable.dtSearch(V.Global.iRowIndex).Bin!FieldValTrim)
+		V.Local.sHeat.Set(V.DataTable.dtSearch(V.Global.iRowIndex).Heat!FieldValTrim)
+		V.Local.sSerial.Set(V.DataTable.dtSearch(V.Global.iRowIndex).Serial!FieldValTrim)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Select PART,LOCN,LOT,BIN,HEAT,SERIAL from ORDER_HIST_LOT Where ORDER_NO = '{0}' AND ORDER_SUFFIX = '{1}' AND ORDER_LINE = '{2}';",V.Global.sOrderNo,V.Global.sOrderSuffix,V.Global.sOrderLine,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtOrdHist","con",V.Local.sSQL,True)
+		F.Intrinsic.Control.If(V.DataTable.dtOrdHist.RowCount,=,0)
+			F.Intrinsic.UI.Msgbox("No records found.","Record Check")
+			F.Data.DataTable.Close("dtOrdHist")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+		V.Local.sPart.Set(V.DataTable.dtOrdHist(0).PART!FieldValTrim)
+		V.Local.sLoc.Set(V.DataTable.dtOrdHist(0).LOCN!FieldValTrim)
+		V.Local.sLot.Set(V.DataTable.dtOrdHist(0).LOT!FieldValTrim)
+		V.Local.sBin.Set(V.DataTable.dtOrdHist(0).BIN!FieldValTrim)
+		V.Local.sHeat.Set(V.DataTable.dtOrdHist(0).HEAT!FieldValTrim)
+		V.Local.sSerial.Set(V.DataTable.dtOrdHist(0).SERIAL!FieldValTrim)
+		F.Data.DataTable.Close("dtOrdHist")
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.Create("dtSave",True)
+	F.Data.DataTable.AddColumn("dtSave","ID",String)
+	F.Data.DataTable.AddColumn("dtSave","ORDER_REC",String)
+	F.Data.DataTable.AddColumn("dtSave","PART",String)
+	F.Data.DataTable.AddColumn("dtSave","LOCATION",String)
+	F.Data.DataTable.AddColumn("dtSave","LOT",String)
+	F.Data.DataTable.AddColumn("dtSave","BIN",String)
+	F.Data.DataTable.AddColumn("dtSave","HEAT",String)
+	F.Data.DataTable.AddColumn("dtSave","SERIAL",String)
+	F.Data.DataTable.AddColumn("dtSave","JOB",String)
+	F.Data.DataTable.AddColumn("dtSave","SUFFIX",String)
+	F.Data.DataTable.AddColumn("dtSave","CODE_TRANSACTION",String)
+	F.Data.DataTable.AddColumn("dtSave","SEQUENCE",String)
+	F.Data.DataTable.AddColumn("dtSave","CHK",String)
+
+	F.Intrinsic.String.Build("Select CODE_TRANSACTION,JOB,SUFFIX,SEQUENCE from V_ITEM_HISTORY Where PART = '{0}' AND LOCATION = '{1}' AND LOT = '{2}' AND BIN = '{3}' AND HEAT = '{4}' AND SERIAL_NUMBER = '{5}' AND CODE_TRANSACTION IN ('J52','J55','S52','C52','R10','R11');",V.Local.sPart,V.Local.sLoc,V.Local.sLot,V.Local.sBin,V.Local.sHeat,V.Local.sSerial,V.Local.sSQL)
+	F.Data.DataTable.CreateFromSQL("dtItemHist","con",V.Local.sSQL,True)
+	
+					
+	''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''				
+	
+'	
+'	f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.dtItemHist.RowCount--,1)
+'	
+'		F.Intrinsic.String.Build("SELECT PART, LOCATION, LOT, BIN, HEAT,SERIAL_NUMBER,CODE_TRANSACTION,JOB,SUFFIX,SEQUENCE from V_ITEM_HISTORY Where JOB = '{0}';",V.DataTable.dtItemHist(V.Local.iCnt).Job!FieldValTrim,v.Local.sSQL)
+'		F.Data.DataTable.CreateFromSQL("dtTemp","con",V.Local.sSQL,True)
+'	
+'	
+'	f.Intrinsic.Control.Next(v.Local.iCnt)
+
+'	f.Data.Datatable.Close("dtItemHist")
+'	f.Data.Datatable.Create("dtItemHist")
+'	f.Data.Datatable.Merge("dtTemp","dtItemHist",true,4)
+'	f.Data.Datatable.Close("dtTemp")
+'	
+'	
+'	
+'	
+'	
+'	
+'	
+'	F.Intrinsic.Control.If(V.DataTable.dtItemHist.RowCount,<>,0)
+'		F.Intrinsic.Control.For(V.Local.iCnt2,0,V.DataTable.dtItemHist.RowCount--,1)
+'			V.Local.sJob.Set(V.DataTable.dtItemHist(V.Local.iCnt2).JOB!FieldValTrim)
+'			V.Local.sSuffix.Set(V.DataTable.dtItemHist(V.Local.iCnt2).SUFFIX!FieldValTrim)
+'			V.Local.sCodeTrans.Set(V.DataTable.dtItemHist(V.Local.iCnt2).CODE_TRANSACTION!FieldValTrim)
+'			V.Local.sSeq.Set(V.DataTable.dtItemHist(V.Local.iCnt2).SEQUENCE!FieldValTrim)
+'			F.Data.DataTable.AddRow("dtSave","ID",V.Local.iID,"PART",V.DataTable.dtItemHist(V.Local.iCnt2).PART!FieldValTrim,"LOCATION",V.DataTable.dtItemHist(V.Local.iCnt2).LOCATION!FieldValTrim,"LOT",V.DataTable.dtItemHist(V.Local.iCnt2).LOT!FieldValTrim,"BIN",V.DataTable.dtItemHist(V.Local.iCnt2).BIN!FieldValTrim,"HEAT",V.DataTable.dtItemHist(V.Local.iCnt2).HEAT!FieldValTrim,"SERIAL",V.DataTable.dtItemHist(V.Local.iCnt2).SERIAL_NUMBER!FieldValTrim,"JOB",V.DataTable.dtItemHist(V.Local.iCnt2).JOB!FieldValTrim,"SUFFIX",V.DataTable.dtItemHist(V.Local.iCnt2).SUFFIX!FieldValTrim,"CODE_TRANSACTION",V.DataTable.dtItemHist(V.Local.iCnt2).CODE_TRANSACTION!FieldValTrim,"SEQUENCE",V.DataTable.dtItemHist(V.Local.iCnt2).SEQUENCE!FieldValTrim,"ORDER_REC",V.Global.sOrderLine,"CHK","N")
+'			F.Intrinsic.Math.Add(V.Local.iID,1,V.Local.iID)
+'		F.Intrinsic.Control.Next(V.Local.iCnt2)
+'	F.Intrinsic.Control.EndIf
+'	F.Data.DataTable.Close("dtItemHist")
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+					
+	''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''				
+					
+					
+					
+'	
+	F.Intrinsic.Control.If(V.DataTable.dtItemHist.RowCount,<>,0)
+		F.Intrinsic.Control.For(V.Local.iCnt2,0,V.DataTable.dtItemHist.RowCount--,1)
+			V.Local.sJob.Set(V.DataTable.dtItemHist(V.Local.iCnt2).JOB!FieldValTrim)
+			V.Local.sSuffix.Set(V.DataTable.dtItemHist(V.Local.iCnt2).SUFFIX!FieldValTrim)
+			V.Local.sCodeTrans.Set(V.DataTable.dtItemHist(V.Local.iCnt2).CODE_TRANSACTION!FieldValTrim)
+			V.Local.sSeq.Set(V.DataTable.dtItemHist(V.Local.iCnt2).SEQUENCE!FieldValTrim)
+			F.Data.DataTable.AddRow("dtSave","ID",V.Local.iID,"PART",V.Local.sPart,"LOCATION",V.Local.sLoc,"LOT",V.Local.sLot,"BIN",V.Local.sBin,"HEAT",V.Local.sHeat,"SERIAL",V.Local.sSerial,"JOB",V.Local.sJob,"SUFFIX",V.Local.sSuffix,"CODE_TRANSACTION",V.Local.sCodeTrans,"SEQUENCE",V.Local.sSeq,"ORDER_REC",V.Global.sOrderLine,"CHK","N")
+			F.Intrinsic.Math.Add(V.Local.iID,1,V.Local.iID)
+		F.Intrinsic.Control.Next(V.Local.iCnt2)
+	F.Intrinsic.Control.EndIf
+	F.Data.DataTable.Close("dtItemHist")
+	
+	
+	
+	
+
+	F.Intrinsic.Control.Do
+		F.Data.DataTable.Select("dtSave","CHK = 'N' and CODE_TRANSACTION IN ('J52', 'S52', 'C52')",V.Local.sSelect)
+		F.Intrinsic.Control.If(V.Local.sSelect,=,"***NORETURN***")
+			F.Intrinsic.Control.ExitDo
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Split(V.Local.sSelect,"*!*",V.Local.sSelect)
+			F.Data.DataTable.SetValue("dtSave",V.Local.sSelect(V.Local.sSelect.LBound.Long),"CHK","Y")
+
+			F.Intrinsic.Control.If(V.DataTable.dtSave(V.Local.sSelect(V.Local.sSelect.LBound.Long)).SEQUENCE!FieldVal,>=,990000)
+				F.Intrinsic.Control.SelectCase(V.DataTable.dtSave(V.Local.sSelect(V.Local.sSelect.LBound.Long)).CODE_TRANSACTION!FieldVal)
+					F.Intrinsic.Control.CaseAny("J52","S52","C52")
+						V.Local.iCodeChk.Set(1)
+				F.Intrinsic.Control.EndSelect
+
+
+				F.Intrinsic.Control.If(V.Local.iCodeChk,=,1)
+				
+					'F.Intrinsic.String.Build("SELECT PART,LOCATION,LOT,BIN,HEAT,SERIAL_NUMBER,JOB,SUFFIX,CODE_TRANSACTION,SEQUENCE FROM V_ITEM_HISTORY WHERE JOB = '{0}' AND SUFFIX = '{1}' AND CODE_TRANSACTION IN ('J52','J55','S52','C52','R10','R11') ORDER BY LOT,BIN,HEAT,SERIAL_NUMBER;",V.DataTable.dtSave(V.Local.sSelect(V.Local.sSelect.LBound.Long)).JOB!FieldValTrim,V.DataTable.dtSave(V.Local.sSelect(V.Local.sSelect.LBound.Long)).SUFFIX!FieldValTrim,V.Local.sSQL)
+					F.Intrinsic.String.Build("SELECT PART,LOCATION,LOT,BIN,HEAT,SERIAL_NUMBER,JOB,SUFFIX,CODE_TRANSACTION,SEQUENCE FROM V_ITEM_HISTORY WHERE JOB = '{0}' AND CODE_TRANSACTION IN ('J52','J55','S52','C52','R10','R11') ORDER BY LOT,BIN,HEAT,SERIAL_NUMBER;",V.DataTable.dtSave(V.Local.sSelect(V.Local.sSelect.LBound.Long)).JOB!FieldValTrim,V.DataTable.dtSave(V.Local.sSelect(V.Local.sSelect.LBound.Long)).SUFFIX!FieldValTrim,V.Local.sSQL)
+					F.Data.DataTable.CreateFromSQL("dtL1","con",V.Local.sSQL,True)
+					
+					F.Intrinsic.Control.If(V.DataTable.dtL1.RowCount,<>,0)
+						F.Intrinsic.Control.For(V.Local.iCnt3,0,V.DataTable.dtL1.RowCount--,1)
+							F.Intrinsic.String.Build("Part = '{0}' And Location = '{1}' And Lot = '{2}' And Bin = '{3}' And Heat = '{4}' And Serial = '{5}' And Sequence = '{6}' And Job = '{7}' And Suffix = '{8}'",V.DataTable.dtL1(V.Local.iCnt3).PART!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).LOCATION!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).LOT!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).BIN!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).HEAT!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).SERIAL_NUMBER!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).SEQUENCE!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).JOB!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).SUFFIX!FieldValTrim,V.Local.sExp)
+							
+							F.Data.DataTable.Select("dtSave",V.Local.sExp,V.Local.sSelect2)
+							F.Intrinsic.Control.If(V.Local.sSelect2,=,"***NORETURN***")
+								F.Data.DataTable.AddRow("dtSave","ID",V.Local.iID,"PART",V.DataTable.dtL1(V.Local.iCnt3).PART!FieldValTrim,"LOCATION",V.DataTable.dtL1(V.Local.iCnt3).LOCATION!FieldValTrim,"LOT",V.DataTable.dtL1(V.Local.iCnt3).LOT!FieldValTrim,"BIN",V.DataTable.dtL1(V.Local.iCnt3).BIN!FieldValTrim,"HEAT",V.DataTable.dtL1(V.Local.iCnt3).HEAT!FieldValTrim,"SERIAL",V.DataTable.dtL1(V.Local.iCnt3).SERIAL_NUMBER!FieldValTrim,"JOB",V.DataTable.dtL1(V.Local.iCnt3).JOB!FieldValTrim,"SUFFIX",V.DataTable.dtL1(V.Local.iCnt3).SUFFIX!FieldValTrim,"CODE_TRANSACTION",V.DataTable.dtL1(V.Local.iCnt3).CODE_TRANSACTION!FieldValTrim,"SEQUENCE",V.DataTable.dtL1(V.Local.iCnt3).SEQUENCE!FieldValTrim,"ORDER_REC",V.Global.sOrderLine,"CHK","N")
+								F.Intrinsic.Math.Add(V.Local.iID,1,V.Local.iID)
+							F.Intrinsic.Control.EndIf
+						F.Intrinsic.Control.Next(V.Local.iCnt3)
+					F.Intrinsic.Control.EndIf
+					F.Data.DataTable.Close("dtL1")
+				F.Intrinsic.Control.EndIf
+				V.Local.iCodeChk.Set(0)
+
+				F.Intrinsic.Control.SelectCase(V.DataTable.dtSave(V.Local.sSelect(V.Local.sSelect.LBound.Long)).CODE_TRANSACTION!FieldVal)
+					F.Intrinsic.Control.CaseAny("J55","R10","R11")
+						V.Local.iCodeChk.Set(1)
+				F.Intrinsic.Control.EndSelect
+
+				F.Intrinsic.Control.If(V.Local.iCodeChk,=,1)
+					F.Intrinsic.String.Build("Select * FROM V_ITEM_HISTORY WHERE PART = '{0}' AND LOCATION = '{1}' AND LOT = '{2}' AND BIN = '{3}' AND HEAT = '{4}' AND SERIAL_NUMBER = '{5}' AND JOB <> '';",V.DataTable.dtSave(V.Local.sSelect(V.Local.sSelect.LBound.Long)).PART!FieldValTrim,V.DataTable.dtSave(V.Local.sSelect(V.Local.sSelect.LBound.Long)).LOCATION!FieldValTrim,V.DataTable.dtSave(V.Local.sSelect(V.Local.sSelect.LBound.Long)).LOT!FieldValTrim,V.DataTable.dtSave(V.Local.sSelect(V.Local.sSelect.LBound.Long)).BIN!FieldValTrim,V.DataTable.dtSave(V.Local.sSelect(V.Local.sSelect.LBound.Long)).HEAT!FieldValTrim,V.DataTable.dtSave(V.Local.sSelect(V.Local.sSelect.LBound.Long)).SERIAL!FieldValTrim,V.Local.sSQL)
+					F.Data.DataTable.CreateFromSQL("dtL1","con",V.Local.sSQL,True)
+					F.Intrinsic.Control.If(V.DataTable.dtL1.RowCount,<>,0)
+						F.Intrinsic.Control.For(V.Local.iCnt3,0,V.DataTable.dtL1.RowCount--,1)
+							F.Intrinsic.String.Build("Part = '{0}' And Location = '{1}' And Lot = '{2}' And Bin = '{3}' And Heat = '{4}' And Serial = '{5}' And Sequence = '{6}' And Job = '{7}' And Suffix = '{8}'",V.DataTable.dtL1(V.Local.iCnt3).PART!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).LOCATION!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).LOT!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).BIN!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).HEAT!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).SERIAL_NUMBER!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).SEQUENCE!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).JOB!FieldValTrim,V.DataTable.dtL1(V.Local.iCnt3).SUFFIX!FieldValTrim,V.Local.sExp)
+							F.Data.DataTable.Select("dtSave",V.Local.sExp,V.Local.sSelect2)
+							F.Intrinsic.Control.If(V.Local.sSelect2,=,"***NORETURN***")
+								F.Data.DataTable.AddRow("dtSave","ID",V.Local.iID,"PART",V.DataTable.dtL1(V.Local.iCnt3).PART!FieldValTrim,"LOCATION",V.DataTable.dtL1(V.Local.iCnt3).LOCATION!FieldValTrim,"LOT",V.DataTable.dtL1(V.Local.iCnt3).LOT!FieldValTrim,"BIN",V.DataTable.dtL1(V.Local.iCnt3).BIN!FieldValTrim,"HEAT",V.DataTable.dtL1(V.Local.iCnt3).HEAT!FieldValTrim,"SERIAL",V.DataTable.dtL1(V.Local.iCnt3).SERIAL_NUMBER!FieldValTrim,"JOB",V.DataTable.dtL1(V.Local.iCnt3).JOB!FieldValTrim,"SUFFIX",V.DataTable.dtL1(V.Local.iCnt3).SUFFIX!FieldValTrim,"CODE_TRANSACTION",V.DataTable.dtL1(V.Local.iCnt3).CODE_TRANSACTION!FieldValTrim,"SEQUENCE",V.DataTable.dtL1(V.Local.iCnt3).SEQUENCE!FieldValTrim,"ORDER_REC",V.Global.sOrderLine,"CHK","N")
+								F.Intrinsic.Math.Add(V.Local.iID,1,V.Local.iID)
+							F.Intrinsic.Control.EndIf
+						F.Intrinsic.Control.Next(V.Local.iCnt3)
+					F.Intrinsic.Control.EndIf
+					F.Data.DataTable.Close("dtL1")
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Loop
+	
+	F.Intrinsic.Control.CallSub(pullmainp)
+	F.Intrinsic.Control.CallSub(loadlot)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.PullData.End
+
+Program.Sub.PullMainP.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare
+	V.Local.iCnt.Declare
+	V.Local.sOrderRec.Declare
+	V.Local.sPart.Declare
+	V.Local.sLocation.Declare
+	V.Local.sLot.Declare
+	V.Local.sBin.Declare
+	V.Local.sHeat.Declare
+	V.Local.sSerial.Declare
+	V.Local.bShipment.Declare
+	V.Local.sExp.Declare
+	V.Local.sSelect.Declare
+	
+	V.Local.bShipment.Set(True)
+	'Pull Packing No from Shipment_Header
+	F.Intrinsic.String.Build("Select ORIG_PCK_NO from V_SHIPMENT_HEADER Where ORDER_NO = '{0}' AND ORDER_SUFFIX = '{1}';",V.Global.sOrderNo,V.Global.sOrderSuffix,V.Local.sSQL)
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Global.sPckNo)
+	F.Intrinsic.String.Build("Select PART, LOCATION, ORDER_REC from V_SHIPMENT_LINES Where ORDER_NO = '{0}' AND ORDER_SUFFIX = '{1}';",V.Global.sOrderNo,V.Global.sOrderSuffix,V.Local.sSQL)
+	F.Data.DataTable.CreateFromSQL("dtShipLns","con",V.Local.sSQL,True)
+	F.Intrinsic.Control.If(V.DataTable.dtShipLns.RowCount,=,0)
+		V.Local.bShipment.Set(False)
+		F.Data.DataTable.Close("dtShipLns")
+		F.Intrinsic.String.Build("Select PART, LOCATION, ORDER_LINE from V_ORDER_HIST_LINE Where ORDER_NO = '{0}' AND ORDER_SUFFIX = '{1}';",V.Global.sOrderNo,V.Global.sOrderSuffix,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtShipLns","con",V.Local.sSQL,True)
+		F.Intrinsic.Control.If(V.DataTable.dtShipLns.RowCount,=,0)
+			F.Data.DataTable.Close("dtShipLns")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+		'Pull Packing No from Order_Hist_Head
+		F.Intrinsic.String.Build("Select ORIG_PCK_NO from V_ORDER_HIST_HEAD Where ORDER_NO = '{0}' AND ORDER_SUFFIX = '{1}';",V.Global.sOrderNo,V.Global.sOrderSuffix,V.Local.sSQL)
+		F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Global.sPckNo)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtShipLns.RowCount--,1)
+		V.Local.sPart.Set(V.DataTable.dtShipLns(V.Local.iCnt).PART!FieldValTrim)
+		V.Local.sLocation.Set(V.DataTable.dtShipLns(V.Local.iCnt).LOCATION!FieldValTrim)
+		F.Intrinsic.Control.If(V.Local.bShipment)
+			V.Local.sOrderRec.Set(V.DataTable.dtShipLns(V.Local.iCnt).ORDER_REC!FieldValTrim)
+		F.Intrinsic.Control.Else
+			V.Local.sOrderRec.Set(V.DataTable.dtShipLns(V.Local.iCnt).ORDER_LINE!FieldValTrim)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Build("Select LOT,BIN,HEAT,SERIAL from ORDER_HIST_LOT Where ORDER_NO = '{0}' AND ORDER_SUFFIX = '{1}' AND ORDER_LINE = '{2}';",V.Global.sOrderNo,V.Global.sOrderSuffix,V.Global.sOrderLine,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtOrdHist","con",V.Local.sSQL,True)
+		F.Intrinsic.Control.If(V.DataTable.dtOrdHist.RowCount,<>,0)
+			V.Local.sLot.Set(V.DataTable.dtOrdHist(0).LOT!FieldValTrim)
+			V.Local.sBin.Set(V.DataTable.dtOrdHist(0).BIN!FieldValTrim)
+			V.Local.sHeat.Set(V.DataTable.dtOrdHist(0).HEAT!FieldValTrim)
+			V.Local.sSerial.Set(V.DataTable.dtOrdHist(0).SERIAL!FieldValTrim)
+		F.Intrinsic.Control.Else
+			V.Local.sLot.Set("")
+			V.Local.sBin.Set("")
+			V.Local.sHeat.Set("")
+			V.Local.sSerial.Set("")
+		F.Intrinsic.Control.EndIf
+		F.Data.DataTable.Close("dtOrdHist")
+
+'		F.Intrinsic.String.Build("Order_Rec = '{1}' And Part = '{2}' And Location = '{3}' And Lot = '{4}' And Bin = '{5}' And Heat = '{6}' And Serial = '{7}'",V.Global.sOrderLine,V.Local.sPart,V.Local.sLocation,V.Local.sLot,V.Local.sBin,V.Local.sHeat,V.Local.sSerial,V.Local.sExp)
+'		F.Data.DataTable.Select("dtSave",V.Local.sExp,V.Local.sSelect)
+'		F.Intrinsic.Control.If(V.Local.sSelect,=,"***NORETURN***")
+'			F.Data.DataTable.AddRow("dtSave","ID",1,"PART",V.Local.sPart,"LOCATION",V.Local.sLocation,"LOT",V.Local.sLot,"BIN",V.Local.sBin,"HEAT",V.Local.sHeat,"SERIAL",V.Local.sSerial,"JOB","","SUFFIX","","CODE_TRANSACTION","MAN","SEQUENCE","999999","ORDER_REC",V.Global.sOrderLine,"CHK","Y")
+'		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+	F.Data.DataTable.Close("dtShipLns")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.PullMainP.End
+
+Program.Sub.LoadLot.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSql.Declare
+	V.Local.iCnt.Declare
+	V.Local.iFlag.Declare
+	V.Local.sPart.Declare
+	V.Local.sLoc.Declare
+	V.Local.sLot.Declare
+	V.Local.sBin.Declare
+	V.Local.sHeat.Declare
+	V.Local.sSerial.Declare
+	V.Local.sJob.Declare
+	V.Local.sSuffix.Declare
+	V.Local.sSequence.Declare
+	V.Local.sPart2.Declare
+	V.Local.sLoc2.Declare
+	V.Local.sLot2.Declare
+	V.Local.sBin2.Declare
+	V.Local.sHeat2.Declare
+	V.Local.sSerial2.Declare
+	V.Local.sLinkID.Declare
+	V.Local.iLinkID.Declare
+	V.Local.bDCC.Declare
+	V.Local.sStat.Declare
+	V.Local.sSelect.Declare
+	
+	'Remove 999999 Sequences
+	F.Intrinsic.Control.Do
+		F.Data.DataTable.Select("dtSave","ID <> 1 And Sequence = '999999'",V.Local.sSelect)
+		F.Intrinsic.Control.If(V.Local.sSelect,=,"***NORETURN***")
+			F.Intrinsic.Control.ExitDo
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Split(V.Local.sSelect,"*!*",V.Local.sSelect)
+			F.Data.DataTable.DeleteRow("dtSave",V.Local.sSelect(V.Local.sSelect.LBound).Long)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Loop
+	
+	F.Data.DataTable.AddColumn("dtSave","SEL",Boolean)
+	F.Data.DataTable.AddColumn("dtSave","PCK_NO",String)
+	F.Data.DataTable.AddColumn("dtSave","DCC",Boolean)
+	F.Data.DataTable.AddColumn("dtSave","STAT",String)
+	F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtSave.RowCount--,1)
+		V.Local.sPart.Set(V.DataTable.dtSave(V.Local.iCnt).PART!FieldValTrim)
+		V.Local.sLoc.Set(V.DataTable.dtSave(V.Local.iCnt).LOCATION!FieldValTrim)
+		V.Local.sLot.Set(V.DataTable.dtSave(V.Local.iCnt).LOT!FieldValTrim)
+		V.Local.sBin.Set(V.DataTable.dtSave(V.Local.iCnt).BIN!FieldValTrim)
+		V.Local.sHeat.Set(V.DataTable.dtSave(V.Local.iCnt).HEAT!FieldValTrim)
+		V.Local.sSerial.Set(V.DataTable.dtSave(V.Local.iCnt).SERIAL!FieldValTrim)
+		V.Local.sJob.Set(V.DataTable.dtSave(V.Local.iCnt).JOB!FieldValTrim)
+		V.Local.sSuffix.Set(V.DataTable.dtSave(V.Local.iCnt).SUFFIX!FieldValTrim)
+		V.Local.sSequence.Set(V.DataTable.dtSave(V.Local.iCnt).SEQUENCE!FieldValTrim)
+
+		F.Intrinsic.String.RPad(V.Local.sPart," ",20,V.Local.sPart2)
+		F.Intrinsic.String.RPad(V.Local.sLoc," ",2,V.Local.sLoc2)
+		F.Intrinsic.String.RPad(V.Local.sLot," ",15,V.Local.sLot2)
+		F.Intrinsic.String.RPad(V.Local.sBin," ",6,V.Local.sBin2)
+		F.Intrinsic.String.RPad(V.Local.sHeat," ",15,V.Local.sHeat2)
+		F.Intrinsic.String.RPad(V.Local.sSerial," ",30,V.Local.sSerial2)
+		F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}",V.Local.sPart2,V.Local.sLoc2,V.Local.sLot2,V.Local.sBIN2,V.Local.sHeat2,V.Local.sSerial2,V.Local.sLinkID)
+		F.Global.DocumentControl.GetLinkID(V.Local.sLinkID,31,V.Local.iLinkID)
+		F.Intrinsic.String.Build("Select PATH,FILE from ATG_DOC_ASSOC Where LINK_ID = '{0}';",V.Local.iLinkID,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtLink","con",V.Local.sSql,True)
+		F.Intrinsic.Control.If(V.DataTable.dtLink.RowCount,<>,0)
+			V.Local.sStat.Set("Print")
+			V.Local.bDCC.Set(True)
+		F.Intrinsic.Control.Else
+			V.Local.sStat.Set("")
+			V.Local.bDCC.Set(False)
+		F.Intrinsic.Control.EndIf
+		F.Data.DataTable.Close("dtLink")
+
+		F.Data.DataTable.SetValue("dtSave",V.Local.iCnt,"SEL",V.Local.bDCC,"PCK_NO",V.Global.sPckNo,"DCC",V.Local.bDCC,"STAT",V.Local.sStat)
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+
+	F.Data.DataTable.RemoveColumn("dtSave","ORDER_REC")
+	F.Data.DataTable.RemoveColumn("dtSave","CODE_TRANSACTION")
+	F.Data.DataTable.RemoveColumn("dtSave","CHK")
+	F.Data.DataTable.RemoveColumn("dtSave","STAT")
+	
+	F.Intrinsic.Control.CallSub(BuildRelations)
+	F.Intrinsic.Control.If(V.Global.iLoops,<>,-1)
+		F.Intrinsic.Control.CallSub(loadgv)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadLot.End
+
+Program.Sub.BuildRelations.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	V.Local.iCnt.Declare
+	V.Local.iCnt2.Declare
+	V.Local.iCnt3.Declare
+	V.Local.sFilter.Declare
+	V.Local.sDTPrev.Declare
+	V.Local.sDT.Declare
+	V.Local.iDT.Declare
+	V.Local.sSelect.Declare
+	V.Local.sSelect2.Declare
+	V.Local.sJobs.Declare
+	V.Local.sSQL.Declare
+	V.Local.bDT.Declare
+	V.Local.sColumn.Declare
+	
+	
+	F.Intrinsic.Control.If(V.DataTable.dtJobs.Exists)
+		F.Data.DataTable.Close("dtJobs")
+		F.Intrinsic.Control.If(V.Global.iLoops,<>,-1)
+			F.Data.DataTable.Close("0")
+			F.Intrinsic.Control.For(V.Local.iCnt,V.Global.iLoops,0,-1)
+				Gui.frmLookup.GsGCLookup.ClearRows(V.Local.iCnt)
+			F.Intrinsic.Control.Next(V.Local.iCnt)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	V.Global.iLoops.Set(-1)
+	F.Data.DataTable.AddColumn("dtSave","Job2",String)
+	F.Data.DataTable.AddColumn("dtSave","Suffix2",String)
+	F.Data.DataTable.AddExpressionColumn("dtSave","PLLBHS",String,"PART+LOCATION+LOT+BIN+HEAT+SERIAL")
+	F.Data.DataView.Create("dtSave","dvJobs",22,"","Job,Suffix,Sequence")
+	F.Data.DataView.ToDataTableDistinct("dtSave","dvJobs","dtJobs","Job",True)
+	F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtJobs.RowCount--,1)
+		F.Intrinsic.Control.If(V.Local.iCnt,=,0)
+			F.Intrinsic.String.Build("'{0}'",V.DataTable.dtJobs(V.Local.iCnt).JOB!FieldVal,V.Local.sJobs)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0},'{1}'",V.Local.sJobs,V.DataTable.dtJobs(V.Local.iCnt).JOB!FieldVal,V.Local.sJobs)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+	
+	
+'		f.Intrinsic.Debug.InvokeDebugger
+'	
+'F.Intrinsic.Debug.Stop
+
+	F.Intrinsic.Control.If(V.Local.sJobs,=,"")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.Else
+		'Job2
+		F.Intrinsic.String.Build("Select RTrim(Part)+RTrim(Location)+RTrim(Lot)+RTrim(Bin)+RTrim(Heat)+RTrim(Serial_Number) As PLLBHS,Job From V_Item_History Where Job In ({0}) And Sequence = '999999' Order By Suffix;",V.Local.sJobs,V.Local.sSQL)
+		F.Data.Dictionary.CreateFromSQL("dJob","con",V.Local.sSQL)
+		F.Data.Dictionary.SetDefaultReturn("dJob","")
+		F.Data.DataTable.FillFromDictionary("dtSave","dJob","PLLBHS","Job2")
+		F.Data.Dictionary.Close("dJob")
+		'Suffix2
+		F.Intrinsic.String.Build("Select RTrim(Part)+RTrim(Location)+RTrim(Lot)+RTrim(Bin)+RTrim(Heat)+RTrim(Serial_Number) As PLLBHS,RTrim(Suffix) As Suffix From V_Item_History Where Job In ({0}) And Sequence = '999999' Order By Suffix;",V.Local.sJobs,V.Local.sSQL)
+		F.Data.Dictionary.CreateFromSQL("dSuffix","con",V.Local.sSQL)
+		F.Data.Dictionary.SetDefaultReturn("dSuffix","")
+		F.Data.DataTable.FillFromDictionary("dtSave","dSuffix","PLLBHS","Suffix2")
+		F.Data.Dictionary.Close("dSuffix")
+		F.Data.DataTable.RemoveColumn("dtSave","PLLBHS")
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataView.Create("dtSave","dvTop",22,"Sequence = '999999'","Job,Suffix,Sequence")
+	F.Intrinsic.Control.If(V.DataView.dtSave!dvTop.RowCount,<>,0)
+		V.Global.iLoops.Set(0)
+		F.Data.DataView.ToDataTable("dtSave","dvTop","0",True)
+		F.Data.DataTable.CopyColumn("0","SEL","0",True)
+		F.Data.DataTable.RemoveColumn("0","SEL")
+		F.Intrinsic.String.Build("DCC{0}","0",V.Local.sColumn)
+		F.Data.DataTable.CopyColumn("0","DCC",V.Local.sColumn,True)
+		F.Data.DataTable.RemoveColumn("0","DCC")
+		F.Data.DataTable.Select("dtSave","Job2 <> ''",V.Local.sSelect)
+		F.Intrinsic.Control.If(V.Local.sSelect,<>,"***NORETURN***")
+			F.Intrinsic.String.Split(V.Local.sSelect,"*!*",V.Local.sSelect)
+			V.Local.sDTPrev.Set(0)
+			V.Local.sDT.Set(0)
+			F.Intrinsic.String.Build("{0}${1}",V.Local.sDT,V.Local.iDT.++,V.Local.sDT)
+			V.Global.iLoops.Set(V.Local.iDT)
+			F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sSelect.UBound,1)
+				F.Intrinsic.Control.If(V.Local.iCnt,=,0)
+					'F.Intrinsic.String.Build("Job = '{0}' And Suffix = '{1}' And Sequence <> '999999'",V.DataTable.dtSave(V.Local.sSelect(V.Local.iCnt.Long)).Job2!FieldVal,V.DataTable.dtSave(V.Local.sSelect(V.Local.iCnt.Long)).Suffix2!FieldVal,V.Local.sFilter)
+					F.Intrinsic.String.Build("Job = '{0}' And Sequence <> '999999'",V.DataTable.dtSave(V.Local.sSelect(V.Local.iCnt.Long)).Job2!FieldVal,V.DataTable.dtSave(V.Local.sSelect(V.Local.iCnt.Long)).Suffix2!FieldVal,V.Local.sFilter)
+					F.Data.DataView.Create("dtSave","dvTier",22,V.Local.sFilter,"Job,Suffix,Sequence")
+					F.Data.DataView.ToDataTable("dtSave","dvTier",V.Local.sDT,True)
+					F.Data.DataTable.CopyColumn(V.Local.sDT,"SEL",V.Local.iDT,True)
+					F.Data.DataTable.RemoveColumn(V.Local.sDT,"SEL")
+					F.Intrinsic.String.Build("DCC{0}",V.Local.iDT,V.Local.sColumn)
+					F.Data.DataTable.CopyColumn(V.Local.sDT,"DCC",V.Local.sColumn,True)
+					F.Data.DataTable.RemoveColumn(V.Local.sDT,"DCC")
+					F.Data.DataView.Close("dtSave","dvTier")
+				F.Intrinsic.Control.Else
+					V.Local.iCnt3.Set(V.Local.iCnt)
+					F.Data.DataTable.Select(V.Local.sDTPrev,"Sequence Like '99%'",V.Local.sSelect2)
+					F.Intrinsic.Control.If(V.Local.sSelect2,<>,"***NORETURN***")
+						F.Intrinsic.String.Split(V.Local.sSelect2,"*!*",V.Local.sSelect2)
+						F.Intrinsic.String.Build("{0}${1}",V.Local.sDT,V.Local.iDT.++,V.Local.sDT)
+						V.Global.iLoops.Set(V.Local.iDT)
+						F.Intrinsic.Control.For(V.Local.iCnt2,0,V.Local.sSelect2.UBound,1)
+							'F.Intrinsic.String.Build("Job = '{0}' And Suffix = '{1}' And Sequence <> '999999'",V.DataTable.[V.Local.sDTPrev](V.Local.sSelect2(V.Local.iCnt2.Long)).Job2!FieldVal,V.DataTable.[V.Local.sDTPrev](V.Local.sSelect2(V.Local.iCnt2.Long)).Suffix2!FieldVal,V.Local.sFilter)
+							F.Intrinsic.String.Build("Job = '{0}' And Sequence <> '999999'",V.DataTable.[V.Local.sDTPrev](V.Local.sSelect2(V.Local.iCnt2.Long)).Job2!FieldVal,V.DataTable.[V.Local.sDTPrev](V.Local.sSelect2(V.Local.iCnt2.Long)).Suffix2!FieldVal,V.Local.sFilter)
+							F.Data.DataView.Create("dtSave","dvTier",22,V.Local.sFilter,"Job,Suffix,Sequence")
+							F.Intrinsic.Control.If(V.Local.bDT,=,False)
+								F.Data.DataView.ToDataTable("dtSave","dvTier",V.Local.sDT,True)
+								F.Data.DataTable.CopyColumn(V.Local.sDT,"SEL",V.Local.iDT,True)
+								F.Data.DataTable.RemoveColumn(V.Local.sDT,"SEL")
+								F.Intrinsic.String.Build("DCC{0}",V.Local.iDT,V.Local.sColumn)
+								F.Data.DataTable.CopyColumn(V.Local.sDT,"DCC",V.Local.sColumn,True)
+								F.Data.DataTable.RemoveColumn(V.Local.sDT,"DCC")
+								F.Data.DataView.Close("dtSave","dvTier")
+								V.Local.bDT.Set(True)
+							F.Intrinsic.Control.Else
+								F.Data.DataView.ToDataTable("dtSave","dvTier","Merge",True)
+								F.Data.DataTable.CopyColumn("Merge","SEL",V.Local.iDT,True)
+								F.Data.DataTable.RemoveColumn("Merge","SEL")
+								F.Intrinsic.String.Build("DCC{0}",V.Local.iDT,V.Local.sColumn)
+								F.Data.DataTable.CopyColumn("Merge","DCC",V.Local.sColumn,True)
+								F.Data.DataTable.RemoveColumn("Merge","DCC")
+								F.Data.DataView.Close("dtSave","dvTier")
+								F.Data.DataTable.Merge("Merge",V.Local.sDT,True,3)
+								F.Data.DataTable.Close("Merge")
+							F.Intrinsic.Control.EndIf
+							V.Local.iCnt3.Set(V.Local.iCnt3.++)
+						F.Intrinsic.Control.Next(V.Local.iCnt2)
+						V.Local.bDT.Set(False)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.If(V.Local.sDTPrev,<>,V.Local.sDT)
+					F.Data.DataTable.AddRelation(V.Local.sDTPrev,"Job2",V.Local.sDT,"Job")
+				F.Intrinsic.Control.EndIf
+				V.Local.sDTPrev.Set(V.Local.sDT)
+			F.Intrinsic.Control.Next(V.Local.iCnt)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.CatchWhen(21034)
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.BuildRelations.End
+
+Program.Sub.LoadGV.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.iCnt.Declare
+	V.Local.iMod.Declare
+	V.Local.sDT.Declare
+	V.Local.iDT.Declare
+	V.Local.sHeaderColor.Declare
+	V.Local.sColumnColor.Declare
+	V.Local.sColumn.Declare
+	
+	V.Local.sDT.Set("0")
+	V.Local.iDT.Set(0)
+	
+	F.Intrinsic.Control.For(V.Local.iCnt,0,V.Global.iLoops,1)
+		F.Data.DataView.Create(V.Local.sDT,V.Local.sDT)
+		F.Intrinsic.String.Build("DCC{0}",V.Local.iDT,V.Local.sColumn)
+		Gui.frmLookup.GsGCLookup.AddGridviewFromDataview(V.Local.iCnt,0,V.Local.sDT)
+		F.Intrinsic.Control.If(V.Local.iCnt,=,0)
+			Gui.frmLookup.GsGCLookup.SuspendLayout()
+		F.Intrinsic.Control.EndIf
+		Gui.frmLookup.GsGCLookup.SetGridViewProperty(V.Local.iCnt,"MultiSelect",True)
+		Gui.frmLookup.GsGCLookup.SetGridViewProperty(V.Local.iCnt,"AllowSort",True)
+		Gui.frmLookup.GsGCLookup.SetGridViewProperty(V.Local.iCnt,"AllowFilter",True)
+		Gui.frmLookup.GsGCLookup.SetGridViewProperty(V.Local.iCnt,"OptionsDetailShowDetailTabs",False)
+		Gui.frmLookup.GsGCLookup.SetGridViewProperty(V.Local.iCnt,"OptionsViewShowGroupPanel",False)
+		Gui.frmLookup.GsGCLookup.SetGridViewProperty(V.Local.iCnt,"OptionsSelectionEnableAppearanceFocusedRow",False)
+		
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PCK_NO","Visible",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"ID","Visible",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"Job2","Visible",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"Suffix2","Visible",False)
+		
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.iCnt,"VisibleIndex","10")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PART","VisibleIndex","0")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOCATION","VisibleIndex","1")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOT","VisibleIndex","2")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"BIN","VisibleIndex","3")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"HEAT","VisibleIndex","4")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SERIAL","VisibleIndex","5")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"JOB","VisibleIndex","6")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SUFFIX","VisibleIndex","7")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SEQUENCE","VisibleIndex","8")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.sColumn,"VisibleIndex","9")
+	
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.iCnt,"Caption","Print")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PART","Caption","Part")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOCATION","Caption","Loc")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOT","Caption","Lot")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"BIN","Caption","Bin")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"HEAT","Caption","Heat")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SERIAL","Caption","Serial")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"JOB","Caption","Job")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SUFFIX","Caption","Suffix")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SEQUENCE","Caption","Sequence")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.sColumn,"Caption","DCC")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PCK_NO","Caption","Packing List")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"ID","Caption","ID")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"Suffix2","Caption","Suffix2")
+	
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.iCnt,"MinWidth","40")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PART","MinWidth","150")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOCATION","MinWidth","55")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOT","MinWidth","85")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"BIN","MinWidth","85")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"HEAT","MinWidth","100")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SERIAL","MinWidth","100")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"JOB","MinWidth","55")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SUFFIX","MinWidth","45")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SEQUENCE","MinWidth","65")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.sColumn,"MinWidth","45")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PCK_NO","MinWidth","55")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"ID","MinWidth","55")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"Suffix2","MinWidth","55")
+	
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.iCnt,"AllowEdit",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PART","AllowEdit",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOCATION","AllowEdit",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOT","AllowEdit",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"BIN","AllowEdit",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"HEAT","AllowEdit",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SERIAL","AllowEdit",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"JOB","AllowEdit",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SUFFIX","AllowEdit",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SEQUENCE","AllowEdit",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.sColumn,"AllowEdit",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PCK_NO","AllowEdit",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"ID","AllowEdit",False)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"Suffix2","AllowEdit",False)
+		
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.iCnt,"HeaderFontBold",True)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PART","HeaderFontBold",True)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOCATION","HeaderFontBold",True)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOT","HeaderFontBold",True)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"BIN","HeaderFontBold",True)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"HEAT","HeaderFontBold",True)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SERIAL","HeaderFontBold",True)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"JOB","HeaderFontBold",True)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SUFFIX","HeaderFontBold",True)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SEQUENCE","HeaderFontBold",True)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.sColumn,"HeaderFontBold",True)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PCK_NO","HeaderFontBold",True)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"ID","HeaderFontBold",True)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"Suffix2","HeaderFontBold",True)
+	
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.iCnt,"HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PART","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOCATION","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOT","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"BIN","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"HEAT","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SERIAL","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"JOB","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SUFFIX","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SEQUENCE","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.sColumn,"HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PCK_NO","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"ID","HeaderHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"Suffix2","HeaderHAlignment","Center")
+	
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.iCnt,"CellHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOCATION","CellHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOT","CellHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"BIN","CellHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"HEAT","CellHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SERIAL","CellHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"JOB","CellHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SUFFIX","CellHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SEQUENCE","CellHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.sColumn,"CellHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PCK_NO","CellHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"ID","CellHAlignment","Center")
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"Suffix2","CellHAlignment","Center")
+		
+		V.Local.sHeaderColor.Set("109, 187, 126")
+		V.Local.sColumnColor.Set("171, 216, 181")
+		F.Intrinsic.Math.Mod(V.Local.iCnt,2,V.Local.iMod)
+		F.Intrinsic.Control.If(V.Local.iMod,<>,0)
+			V.Local.sHeaderColor.Set("179, 181, 182")
+			V.Local.sColumnColor.Set("212, 213, 213")
+		F.Intrinsic.Control.EndIf
+		
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.iCnt,"HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PART","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOCATION","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOT","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"BIN","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"HEAT","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SERIAL","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"JOB","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SUFFIX","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SEQUENCE","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.sColumn,"HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PCK_NO","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"ID","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"Suffix2","HeaderBackColor",V.Local.sHeaderColor)
+		
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.iCnt,"CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PART","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOCATION","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"LOT","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"BIN","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"HEAT","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SERIAL","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"JOB","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SUFFIX","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"SEQUENCE","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,V.Local.sColumn,"CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"PCK_NO","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"ID","CellBackColor",V.Local.sColumnColor)
+		Gui.frmLookup.GsGCLookup.SetColumnProperty(V.Local.iCnt,"Suffix2","CellBackColor",V.Local.sColumnColor)
+		
+		F.Intrinsic.Control.If(V.Local.iCnt,=,0)
+		
+		
+			Gui.frmLookup.GsGCLookup.ResumeLayout()
+			Gui.frmLookup.GsGCLookup.MainView(V.Local.iCnt)
+			
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.String.Build("{0}${1}",V.Local.sDT,V.Local.iDT.++,V.Local.sDT)
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+	
+	
+	F.Intrinsic.Control.CallSub(ExpandCollapse,"ItemName","EXPAND")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadGV.End
+
+Program.Sub.frmShowAll_UnLoad.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	Gui.frmShowAll..Visible(False)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmShowAll_UnLoad.End
+
+Program.Sub.ShowAllParts.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sHeaderColor.Declare
+	V.Local.sColumnColor.Declare
+	
+	V.Local.sHeaderColor.Set("109, 187, 126")
+	V.Local.sColumnColor.Set("171, 216, 181")
+	
+	F.Intrinsic.Control.If(V.DataView.dtSave!dvSave.Exists)
+		F.Data.DataView.Close("dtSave","dvSave")
+	F.Intrinsic.Control.EndIf
+	F.Data.DataView.Create("dtSave","dvSave",22,"","Job,Suffix,Sequence")
+	Gui.frmShowAll.GsGCShowAll.AddGridviewFromDataview("gvLookup","dtSave","dvSave")
+	Gui.frmShowAll.GsGCShowAll.SuspendLayout()
+	Gui.frmShowAll.GsGCShowAll.SetGridViewProperty("gvLookup","MultiSelect",True)
+	Gui.frmShowAll.GsGCShowAll.SetGridViewProperty("gvLookup","AllowSort",True)
+	Gui.frmShowAll.GsGCShowAll.SetGridViewProperty("gvLookup","AllowFilter",True)
+	Gui.frmShowAll.GsGCShowAll.SetGridViewProperty("gvLookup","OptionsDetailShowDetailTabs",False)
+	Gui.frmShowAll.GsGCShowAll.SetGridViewProperty("gvLookup","OptionsViewShowGroupPanel",False)
+	Gui.frmShowAll.GsGCShowAll.SetGridViewProperty("gvLookup","OptionsSelectionEnableAppearanceFocusedRow",False)
+	
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PCK_NO","Visible",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","ID","Visible",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","Suffix2","Visible",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEL","Visible",False)
+	
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PART","VisibleIndex","0")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOCATION","VisibleIndex","1")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOT","VisibleIndex","2")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","BIN","VisibleIndex","3")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","HEAT","VisibleIndex","4")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SERIAL","VisibleIndex","5")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","JOB","VisibleIndex","6")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SUFFIX","VisibleIndex","7")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEQUENCE","VisibleIndex","8")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","DCC","VisibleIndex","9")
+
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PART","Caption","Part")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOCATION","Caption","Loc")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOT","Caption","Lot")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","BIN","Caption","Bin")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","HEAT","Caption","Heat")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SERIAL","Caption","Serial")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","JOB","Caption","Job")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SUFFIX","Caption","Suffix")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEQUENCE","Caption","Sequence")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","DCC","Caption","DCC")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PCK_NO","Caption","Packing List")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","ID","Caption","ID")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","Suffix2","Caption","Suffix2")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEL","Caption","Print")
+
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PART","MinWidth","150")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOCATION","MinWidth","55")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOT","MinWidth","85")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","BIN","MinWidth","85")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","HEAT","MinWidth","100")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SERIAL","MinWidth","100")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","JOB","MinWidth","55")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SUFFIX","MinWidth","45")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEQUENCE","MinWidth","65")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","DCC","MinWidth","45")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PCK_NO","MinWidth","55")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","ID","MinWidth","55")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","Suffix2","MinWidth","55")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEL","MinWidth","55")
+
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PART","AllowEdit",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOCATION","AllowEdit",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOT","AllowEdit",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","BIN","AllowEdit",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","HEAT","AllowEdit",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SERIAL","AllowEdit",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","JOB","AllowEdit",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SUFFIX","AllowEdit",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEQUENCE","AllowEdit",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","DCC","AllowEdit",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PCK_NO","AllowEdit",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","ID","AllowEdit",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","Suffix2","AllowEdit",False)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEL","AllowEdit",False)
+	
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PART","HeaderFontBold",True)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOCATION","HeaderFontBold",True)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOT","HeaderFontBold",True)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","BIN","HeaderFontBold",True)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","HEAT","HeaderFontBold",True)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SERIAL","HeaderFontBold",True)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","JOB","HeaderFontBold",True)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SUFFIX","HeaderFontBold",True)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEQUENCE","HeaderFontBold",True)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","DCC","HeaderFontBold",True)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PCK_NO","HeaderFontBold",True)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","ID","HeaderFontBold",True)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","Suffix2","HeaderFontBold",True)
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEL","HeaderFontBold",True)
+
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PART","HeaderHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOCATION","HeaderHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOT","HeaderHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","BIN","HeaderHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","HEAT","HeaderHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SERIAL","HeaderHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","JOB","HeaderHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SUFFIX","HeaderHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEQUENCE","HeaderHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","DCC","HeaderHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PCK_NO","HeaderHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","ID","HeaderHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","Suffix2","HeaderHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEL","HeaderHAlignment","Center")
+
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOCATION","CellHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOT","CellHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","BIN","CellHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","HEAT","CellHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SERIAL","CellHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","JOB","CellHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SUFFIX","CellHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEQUENCE","CellHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","DCC","CellHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PCK_NO","CellHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","ID","CellHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","Suffix2","CellHAlignment","Center")
+	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEL","CellHAlignment","Center")
+	
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PART","HeaderBackColor",V.Local.sHeaderColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOCATION","HeaderBackColor",V.Local.sHeaderColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOT","HeaderBackColor",V.Local.sHeaderColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","BIN","HeaderBackColor",V.Local.sHeaderColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","HEAT","HeaderBackColor",V.Local.sHeaderColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SERIAL","HeaderBackColor",V.Local.sHeaderColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","JOB","HeaderBackColor",V.Local.sHeaderColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SUFFIX","HeaderBackColor",V.Local.sHeaderColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEQUENCE","HeaderBackColor",V.Local.sHeaderColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","DCC","HeaderBackColor",V.Local.sHeaderColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PCK_NO","HeaderBackColor",V.Local.sHeaderColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","ID","HeaderBackColor",V.Local.sHeaderColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","Suffix2","HeaderBackColor",V.Local.sHeaderColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEL","HeaderBackColor",V.Local.sHeaderColor)
+'	
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PART","CellBackColor",V.Local.sColumnColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOCATION","CellBackColor",V.Local.sColumnColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","LOT","CellBackColor",V.Local.sColumnColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","BIN","CellBackColor",V.Local.sColumnColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","HEAT","CellBackColor",V.Local.sColumnColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SERIAL","CellBackColor",V.Local.sColumnColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","JOB","CellBackColor",V.Local.sColumnColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SUFFIX","CellBackColor",V.Local.sColumnColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEQUENCE","CellBackColor",V.Local.sColumnColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","DCC","CellBackColor",V.Local.sColumnColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","PCK_NO","CellBackColor",V.Local.sColumnColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","ID","CellBackColor",V.Local.sColumnColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","Suffix2","CellBackColor",V.Local.sColumnColor)
+'	Gui.frmShowAll.GsGCShowAll.SetColumnProperty("gvLookup","SEL","CellBackColor",V.Local.sColumnColor)
+	
+	Gui.frmShowAll.GsGCShowAll.ResumeLayout()
+	Gui.frmShowAll.GsGCShowAll.MainView("gvLookup")
+	
+	Gui.frmShowAll..Show
+	
+	F.Intrinsic.Control.CatchWhen(121000)
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.ShowAllParts.End
+
+Program.Sub.frmShowWOs_UnLoad.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	Gui.frmShowWOs..Visible(False)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmShowWOs_UnLoad.End
+
+Program.Sub.ShowWOs.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.iCnt.Declare
+	V.Local.sJS.Declare
+	V.Local.sSQL.Declare
+	V.Local.sHeaderColor.Declare
+	V.Local.sColumnColor.Declare
+	
+	V.Local.sHeaderColor.Set("109, 187, 126")
+	V.Local.sColumnColor.Set("171, 216, 181")
+
+	F.Data.DataTable.AddExpressionColumn("dtSave","JS",String,"JOB+SUFFIX")
+	F.Data.DataView.Create("dtSave","dvJS",22,"","JS")
+	F.Data.DataView.ToDataTableDistinct("dtSave","dvJS","dtJS","JS",True)
+	F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtJS.RowCount--,1)
+		F.Intrinsic.Control.If(V.Local.iCnt,=,0)
+			F.Intrinsic.String.Build("'{0}'",V.DataTable.dtJS(V.Local.iCnt).JS!FieldVal,V.Local.sJS)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0},'{1}'",V.Local.sJS,V.DataTable.dtJS(V.Local.iCnt).JS!FieldVal,V.Local.sJS)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+	F.Data.DataTable.RemoveColumn("dtSave","JS")
+	F.Data.DataTable.Close("dtJS")
+	
+	F.Intrinsic.Control.If(V.Local.sJS,=,"")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Select If(Suffix = '',Job,Job+'-'+Suffix) As WorkOrder,Job,Suffix,Seq,Lmo,RTrim(Part) As Part,Operation,Description From V_Job_Operations Where Job+Suffix In ({0}) And Seq < '995000' Order By Job,Suffix,Seq;",V.Local.sJS,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtSeqs","con",V.Local.sSQL,True)
+		F.Intrinsic.Control.If(V.DataTable.dtSeqs.RowCount,=,0)
+			F.Data.DataTable.Close("dtSeqs")
+			F.Intrinsic.String.Build("Select If(Suffix = '',Job,Job+'-'+Suffix) As WorkOrder,Job,Suffix,Seq,Lmo,RTrim(Part) As Part,Operation,Description From V_Job_Hist_Ops Where Job+Suffix In ({0}) And Seq < '995000' Order By Job,Suffix,Seq;",V.Local.sJS,V.Local.sSQL)
+			F.Data.DataTable.CreateFromSQL("dtSeqs","con",V.Local.sSQL,True)
+			F.Intrinsic.Control.If(V.DataTable.dtSeqs.RowCount,=,0)
+				F.Data.DataTable.Close("dtSeqs")
+				F.Intrinsic.Control.ExitSub
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		
+		Gui.frmShowWOs.GsGCShowWOs.AddGridviewFromDatatable("gvSeqs","dtSeqs")
+		Gui.frmShowWOs.GsGCShowWOs.SuspendLayout()
+		Gui.frmShowWOs.GsGCShowWOs.SetGridViewProperty("gvSeqs","MultiSelect",True)
+		Gui.frmShowWOs.GsGCShowWOs.SetGridViewProperty("gvSeqs","Editable",False)
+		Gui.frmShowWOs.GsGCShowWOs.SetGridViewProperty("gvSeqs","ReadOnly",True)
+		Gui.frmShowWOs.GsGCShowWOs.SetGridViewProperty("gvSeqs","AllowSort",True)
+		Gui.frmShowWOs.GsGCShowWOs.SetGridViewProperty("gvSeqs","AllowFilter",True)
+		Gui.frmShowWOs.GsGCShowWOs.SetGridViewProperty("gvSeqs","OptionsDetailShowDetailTabs",False)
+		Gui.frmShowWOs.GsGCShowWOs.SetGridViewProperty("gvSeqs","OptionsViewShowGroupPanel",False)
+		Gui.frmShowWOs.GsGCShowWOs.SetGridViewProperty("gvSeqs","OptionsSelectionEnableAppearanceFocusedRow",False)
+		
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Job","Visible",False)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Suffix","Visible",False)
+		
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","WorkOrder","Caption","Work Order")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Job","Caption","Job")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Suffix","Caption","Suffix")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Seq","Caption","Seq")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Lmo","Caption","LMO")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Part","Caption","Part/WC/Outside")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Operation","Caption","Op Code/Vendor")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Description","Caption","Description")
+	
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","WorkOrder","MinWidth","65")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Job","MinWidth","65")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Suffix","MinWidth","65")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Seq","MinWidth","65")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Lmo","MinWidth","65")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Part","MinWidth","150")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Operation","MinWidth","85")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Description","MinWidth","150")
+
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","WorkOrder","HeaderFontBold",True)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Job","HeaderFontBold",True)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Suffix","HeaderFontBold",True)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Seq","HeaderFontBold",True)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Lmo","HeaderFontBold",True)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Part","HeaderFontBold",True)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Operation","HeaderFontBold",True)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Description","HeaderFontBold",True)
+
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","WorkOrder","HeaderHAlignment","Center")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Job","HeaderHAlignment","Center")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Suffix","HeaderHAlignment","Center")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Seq","HeaderHAlignment","Center")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Lmo","HeaderHAlignment","Center")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Part","HeaderHAlignment","Center")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Operation","HeaderHAlignment","Center")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Description","HeaderHAlignment","Center")
+
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","WorkOrder","CellHAlignment","Center")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Job","CellHAlignment","Center")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Suffix","CellHAlignment","Center")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Seq","CellHAlignment","Center")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Lmo","CellHAlignment","Center")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Part","CellHAlignment","Center")
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Operation","CellHAlignment","Center")
+
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","WorkOrder","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Job","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Suffix","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Seq","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Lmo","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Part","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Operation","HeaderBackColor",V.Local.sHeaderColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Description","HeaderBackColor",V.Local.sHeaderColor)
+
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","WorkOrder","CellBackColor",V.Local.sColumnColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Job","CellBackColor",V.Local.sColumnColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Suffix","CellBackColor",V.Local.sColumnColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Seq","CellBackColor",V.Local.sColumnColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Lmo","CellBackColor",V.Local.sColumnColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Part","CellBackColor",V.Local.sColumnColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Operation","CellBackColor",V.Local.sColumnColor)
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Description","CellBackColor",V.Local.sColumnColor)
+		
+'		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","Seq","CellForeColor","Blue")
+		
+		Gui.frmShowWOs.GsGCShowWOs.SetColumnProperty("gvSeqs","WorkOrder","GroupIndex",0)
+		
+		Gui.frmShowWOs.GsGCShowWOs.ResumeLayout()
+		Gui.frmShowWOs.GsGCShowWOs.MainView("gvSeqs")
+		F.Data.DataTable.Close("dtSeqs")
+		
+		Gui.frmShowWOs..Show
+	F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.ShowWOs.End
+
+Program.Sub.GsGCShowWOs_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+'	V.Local.sJob.Declare
+'	V.Local.sSuffix.Declare
+'	V.Local.sSeq.Declare
+'	V.Local.sLmo.Declare
+'	V.Local.sWC.Declare
+'	V.Local.sOpCode.Declare
+'	V.Local.iBIRunID.Declare
+'	V.Local.iBILogID.Declare
+'	V.local.iRet.Declare
+'	V.Local.iRptID.Declare
+'	V.Local.sParamNames.Declare
+'	V.Local.sParamValues.Declare
+
+'	F.Intrinsic.Control.SelectCase(V.Args.Column)
+'		F.Intrinsic.Control.CaseAny("Seq","SEQ")
+'			Gui.frmShowWOs.GsGCShowWOs.GetCellValueByColumnName("gvSeqs","Job",V.Args.RowIndex,V.Local.sJob)
+'			Gui.frmShowWOs.GsGCShowWOs.GetCellValueByColumnName("gvSeqs","Suffix",V.Args.RowIndex,V.Local.sSuffix)
+'			Gui.frmShowWOs.GsGCShowWOs.GetCellValueByColumnName("gvSeqs","Seq",V.Args.RowIndex,V.Local.sSeq)
+'			Gui.frmShowWOs.GsGCShowWOs.GetCellValueByColumnName("gvSeqs","Lmo",V.Args.RowIndex,V.Local.sLmo)
+'			Gui.frmShowWOs.GsGCShowWOs.GetCellValueByColumnName("gvSeqs","Part",V.Args.RowIndex,V.Local.sWC)
+'			Gui.frmShowWOs.GsGCShowWOs.GetCellValueByColumnName("gvSeqs","Operation",V.Args.RowIndex,V.Local.sOpCode)
+'			'Print Report
+'			F.Global.BI.GetIDFromName("GAB_4842_Seq_Report.rpt",V.Local.iRptID)
+'			F.Intrinsic.Control.If(V.Local.iRptID,<,0)
+'				F.Intrinsic.UI.Msgbox("GAB_4842_Seq_Report.rpt is not setup as a custom report.","Report not setup")
+'				F.Intrinsic.Control.End
+
+'			F.Intrinsic.Control.EndIf
+'			
+'			F.Global.BI.GetRunID(V.Local.iBIRunID)
+'			F.Global.BI.StartLogging(V.Local.iBIRunID,V.Local.iRptID,0,"",V.Local.iBILogID)
+'			
+'			V.Local.sParamNames.Set("JOB*!*SUFFIX*!*SEQ*!*LMO*!*WC*!*OPCODE")
+'			F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}",V.Local.sJob,V.Local.sSuffix,V.Local.sSeq,V.Local.sLmo,V.Local.sWC,V.Local.sOpCode,V.Local.sParamValues)
+'			F.Global.BI.RunReportPreProcessor(V.Local.iBIRunID,V.Local.iBILogID,V.Local.sParamNames,V.Local.sParamValues,"",-1,True,"",-1,"",-1,"","",V.Local.iRet)
+'			
+'			F.Global.BI.StopLogging(V.Local.iBILogID)
+'	F.Intrinsic.Control.EndSelect
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCShowWOs_RowCellClick.End
+
+Program.Sub.GsGCLookup_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.bPrint.Declare
+	V.Local.iID.Declare
+	V.Local.sExp.Declare
+	V.Local.sSelect.Declare
+	V.Local.sPart.Declare
+	V.Local.sLoc.Declare
+	V.Local.sLot.Declare
+	V.Local.sBin.Declare
+	V.Local.sHeat.Declare
+	V.Local.sSerial.Declare
+	V.Local.sLinkID.Declare
+	V.Local.iPID.Declare
+	
+	F.Intrinsic.Control.SelectCase(V.Args.Column)
+		F.Intrinsic.Control.CaseAny("PART","LOCATION","LOT","BIN","HEAT","SERIAL","JOB","SUFFIX","SEQUENCE","DCC","PCK_NO","ID","Suffix2")
+
+		F.Intrinsic.Control.CaseElse
+			Gui.frmLookup.GsGCLookup.GetCellValueByColumnName(V.Args.Column.Right1,V.Args.Column.Right1,V.Args.RowIndex,V.Local.bPrint)
+			Gui.frmLookup.GsGCLookup.GetCellValueByColumnName(V.Args.Column.Right1,"ID",V.Args.RowIndex,V.Local.iID)
+
+			F.Intrinsic.Control.If(V.Args.Column.Left3,<>,"DCC")
+				F.Intrinsic.Control.If(V.Local.bPrint,=,False)
+					Gui.frmLookup.GsGCLookup.SetCellValueByColumnName(V.Args.Column,V.Args.Column,V.Args.RowIndex,True)
+					F.Intrinsic.String.Build("ID = '{0}'",V.Local.iID,V.Local.sExp)
+					F.Data.DataTable.Select("dtSave",V.Local.sExp,V.Local.sSelect)
+					F.Data.DataTable.SetValue("dtSave",V.Local.sSelect.Long,"SEL",True)
+				F.Intrinsic.Control.Else
+					Gui.frmLookup.GsGCLookup.SetCellValueByColumnName(V.Args.Column,V.Args.Column,V.Args.RowIndex,False)
+					F.Intrinsic.String.Build("ID = '{0}'",V.Local.iID,V.Local.sExp)
+					F.Data.DataTable.Select("dtSave",V.Local.sExp,V.Local.sSelect)
+					F.Data.DataTable.SetValue("dtSave",V.Local.sSelect.Long,"SEL",False)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("ID = '{0}'",V.Local.iID,V.Local.sExp)
+				F.Data.DataTable.Select("dtSave",V.Local.sExp,V.Local.sSelect)
+				F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.sSelect.Long).PART!FieldValTrim," ",20,V.Local.sPart)
+				F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.sSelect.Long).LOCATION!FieldValTrim," ",2,V.Local.sLoc)
+				F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.sSelect.Long).LOT!FieldValTrim," ",15,V.Local.sLot)
+				F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.sSelect.Long).BIN!FieldValTrim," ",6,V.Local.sBin)
+				F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.sSelect.Long).HEAT!FieldValTrim," ",15,V.Local.sHeat)
+				F.Intrinsic.String.RPad(V.DataTable.dtSave(V.Local.sSelect.Long).SERIAL!FieldValTrim," ",30,V.Local.sSerial)
+				F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}",V.Local.sPart,V.Local.sLoc,V.Local.sLot,V.Local.sBin,V.Local.sHeat,V.Local.sSerial,V.Local.sLinkID)
+				F.Global.DocumentControl.Invoke(V.Local.sLinkID,31,"Item Master....",V.Local.iPID)
+			F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndSelect
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCLookup_RowCellClick.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+${$5$}$2.0.0.0$}$2
+${$6$}$dduncan$}$20211202152129382$}$r0o+00bj735YsiGsQ60YIo/Zb+26OZQG39E9AuacrP0je0sGx6PvAAw4rU6H3uO8gkPh7lTPW2U=
+Program.Sub.Comments.End
